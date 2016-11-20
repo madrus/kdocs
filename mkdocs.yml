@@ -1,0 +1,5 @@
+site_name: Bloglet
+pages:
+  - Blog: index.md
+  - About: about.md
+theme: readthedocs
