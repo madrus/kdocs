@@ -1,11 +1,38 @@
-site_name: Bloglet
+# Project information
+site_name: "Madrus's Docs"
+site_description: 'A short description of my project'
+site_author: 'Madrus'
+site_url: 'https://madrus.github.io/kdocs'
+site_favicon: 'images/favicon.ico'
+
+# Pages structure
+pages:
+  - Home: index.md
+  - MkDocs:
+    - Technicalities: mkdocs/technicalities.md
+    - Custom Styling: mkdocs/custom_styling.md
+  - Umbraco:
+    - Technicalities: umbraco/technicalities.md
+  - 'About': 'about.md'
+
+# Documentation and theme
+docs_dir: 'docs'
+theme: readthedocs
+# theme: cerulean
+# theme: flatly
+# theme: slate
+# theme: cinder
+# theme: alabaster
+# theme: bootstrap
+
+# Options
 extra:
   version: '0.1.0'
-  palette:
-    primary: 'teal'
-    accent: 'orange'
-pages:
-  - Blog: index.md
-  - About: about.md
-#theme: readthedocs
-theme: 'material'
+  logo: 'images/logo.png'
+
+markdown_extensions:
+  - admonition
+  - codehilite(css_class=code)
+  - smarty
+  - toc:
+      permalink: '#'
