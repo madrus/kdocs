@@ -5,6 +5,10 @@ site_author: 'Madrus'
 site_url: 'https://madrus.github.io/kdocs'
 site_favicon: 'images/favicon.ico'
 
+# Repository
+#repo_name: 'GitHub'  # will it work with GitLab?
+repo_url: 'https://github.com/madrus/kdocs'
+
 # Pages structure
 pages:
   - Home: index.md
@@ -42,3 +46,8 @@ markdown_extensions:
       smart_angled_quotes: true
   - toc:
       permalink: '#'
+
+# Google Analytics
+google_analytics:
+  - 'UA-XXXXXXXX-X'
+  - 'auto'
