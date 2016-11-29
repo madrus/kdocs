@@ -40,8 +40,6 @@ markdown_extensions:
   - codehilite(css_class=code):
       guess_lang: false
   - nl2br
-  - toc:
-      permalink: '#'
   - smarty:
       smart_angled_quotes: true
   - toc:
