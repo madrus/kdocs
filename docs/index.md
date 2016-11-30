@@ -12,7 +12,9 @@ In order to view the documents offline, you need Python and the following depend
 
 ```bash
 pip install mkdocs pygments pymdown-extensions
-pip install mkdocs-bootstrap mkdocs-bootswatch mkdocs-alabaster mkdocs-cinder
+pip install mkdocs-bootstrap mkdocs-bootswatch
+pip install mkdocs-alabaster mkdocs-cinder
+pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
 ```
 
 ## Running the project in DEV

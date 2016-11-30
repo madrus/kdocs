@@ -24,26 +24,35 @@ pages:
 # Documentation and theme
 docs_dir: 'docs'
 theme: readthedocs
+theme_dir: custom_theme
 # theme: cerulean
 # theme: flatly
 # theme: slate
 # theme: cinder
 # theme: alabaster
 # theme: bootstrap
+extra_css: [css/extra.css]
+extra_javascript: []
 
 # Options
 extra:
+  version: 0.1.0
   logo: 'images/logo.png'
 
+# Extensions
 markdown_extensions:
   - admonition
   - codehilite(css_class=code):
       guess_lang: false
+  - fontawesome_markdown
   - nl2br
   - smarty:
       smart_angled_quotes: true
   - toc:
       permalink: '#'
+
+#Copyright
+copyright: Copyright &copy; 2016 <a href="https://madrus4u.com">Balans4U</a>
 
 # Google Analytics
 google_analytics:
