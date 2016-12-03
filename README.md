@@ -4,24 +4,42 @@
 
 * `pip install mkdocs`
 * `mkdocs --version`
-* `mkdocs new bloglet`
-* `cd bloglet`
-* `mkdocs serve`
+* `mkdocs new kdocs`
+* `cd kdocs`
 * `curl 'https://jaspervdj.be/lorem-markdownum/markdown.txt' > docs/about.md` -- Add a new dummy page
+
+## Installing prerequisites
+
+In order to view the documents offline, you need Python and the following dependencies:
+
+```bash
+pip install mkdocs pygments pymdown-extensions
+pip install mkdocs-bootstrap mkdocs-bootswatch
+pip install mkdocs-alabaster mkdocs-cinder
+pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
+```
+
+## Running the project in DEV
+
+Open the command prompt in the project root directory and type:
+
+```bash
+mkdocs serve
+```
 
 ## Styling
 
 Add some bits and pieces to mkdocs.yml:
 
 ```ruby
-site_name: Bloglet
+site_name: kdocs
 pages:
   - Blog: index.md
   - About: about.md
 theme: readthedocs
 ```
 
-You will notice that the website will look like __FineCMS__ [documentation][feincms].
+You will notice that the website will look like __FeinCMS__ [documentation][feincms].
 
 ## Building the site
 
@@ -46,7 +64,7 @@ See for more details the [Material for MkDocs][material] page. Also a full examp
 
 ## Deploying to GitHub pages
 
-* `git checkout master`
+* `git push -u origin master`
 * `mkdocs gh-deploy` -- this will build the docs and use [ghp-import][ghp] tool to commit them to the gh-pages branch and push the gh-pages branch to GitHub. Use `mkdocs gh-deploy --help` to get a full list of options available for the `gh-deploy` command.
 
 ## Read the Docs
