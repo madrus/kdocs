@@ -6,7 +6,7 @@ The website can be seen at http://madrus4u.com/kdocs/.
 
 ## Basic Installation
 
-* `pip install mkdocs`
+* `sudo pip install mkdocs`
 * `mkdocs --version`
 * `mkdocs new kdocs`
 * `cd kdocs`
@@ -17,10 +17,10 @@ The website can be seen at http://madrus4u.com/kdocs/.
 In order to view the documents offline, you need **Python** and the following dependencies:
 
 ```bash
-pip install mkdocs pygments pymdown-extensions
-pip install mkdocs-bootstrap mkdocs-bootswatch
-pip install mkdocs-alabaster mkdocs-cinder
-pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
+sudo pip install mkdocs pygments pymdown-extensions
+sudo pip install mkdocs-bootstrap mkdocs-bootswatch
+sudo pip install mkdocs-alabaster mkdocs-cinder
+sudo pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
 ```
 
 ## Running the project in DEV
