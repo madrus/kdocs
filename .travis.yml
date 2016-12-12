@@ -9,7 +9,7 @@ install:
   - pip install mkdocs-bootstrap mkdocs-bootswatch
   - pip install mkdocs-alabaster mkdocs-cinder
   - pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
-  - mkdocs --version
+  - travis_wait mkdocs --version
 
 script:
   - mkdocs build
