@@ -17,9 +17,11 @@ pages:
     - Custom Styling: mkdocs/custom_styling.md
   - Umbraco:
     - Technicalities: umbraco/technicalities.md
-  - Sandbox:
-    - TODOs: sandbox/todo.md
-    - Test Document: sandbox/test.md
+  - Vue.js:
+    - Basics: vuejs/basics.md
+  - Playground:
+    - TODOs: playground/todo.md
+    - Test Document: playground/test.md
 
 # Documentation and theme
 docs_dir: 'docs'
