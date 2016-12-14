@@ -37,10 +37,22 @@ pip install --user powerline-status
 
 ### Cmder
 
-**Standard Colors**
+**Main Font**
 
-I like **Murena Scheme** with some tweaks:
+I like these fonts for the terminal:
 
-*   0 -- 38 42 47 (background)
-*   1/4 -- 0 65 100 (main font color)
-*   6/3 -- 196 160 0 (yellow color for dirty branch)
+*   Roboto Mono for Powerline
+*   Droid Sans Mono Slashed for Powerline
+*   Anonymice Powerline
+
+**Color Scheme**
+
+I like **Murena Scheme** with some tweaks in **Features/Colors**:
+
+| Position | Color Code  | Role                    |
+| :------: | :---------: | ----------------------- |
+| 0        | 0 43 54     | screen background color |
+| idem     | 38 42 47    | idem                    |
+| 1/4      | 0 65 100    | path background color   |
+| 2        | 60 154 6    | clean branch - green    |
+| 6/3      | 196 160 0   | dirty branch - yellow   |
