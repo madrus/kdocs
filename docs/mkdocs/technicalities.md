@@ -2,21 +2,21 @@
 
 [TOC]
 
-## Project layout
+### Project layout
 
     mkdocs.yml    # The configuration file.
     docs/
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
 
-## Useful Commands
+### Useful Commands
 
 * `mkdocs new [dir-name]` - Create a new project.
 * `mkdocs serve` - Start the live-reloading docs server.
 * `mkdocs build` - Build the documentation site.
 * `mkdocs help` - Print this help message.
 
-## Font Awesome
+### Font Awesome
 
 [Font Awesome](https://fortawesome.github.io) gives you scalable vector icons that can instantly be customized -- size, color, drop shadow, and anything that can be done with the power of CSS. For more inpiration see these [examples](http://fontawesome.io/examples/).
 

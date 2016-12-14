@@ -2,7 +2,7 @@
 
 [TOC]
 
-## Admonition extension
+### Admonition extension
 
 !!! warning "This does not always work correctly with Material theme"
     Unfortunately, with Material theme this does not always give correct result. It works fine with the standard ReadTheDocs theme though.
@@ -86,7 +86,7 @@ The word "warning" plus custom title...
 !!! danger "Don't try this at home"
     Or you will regret it for the rest of your life!
 
-## SmartyPants extension
+### SmartyPants extension
 
 Adding
 
@@ -117,9 +117,9 @@ You get:
 -- ndash
 --- mdash
 
-## nl2br extension
+### nl2br extension
 
-Adding 
+Adding
 
 ```yaml
   - nl2br
