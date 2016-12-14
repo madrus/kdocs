@@ -39,5 +39,8 @@ pip install --user powerline-status
 
 **Standard Colors**
 
-*   0 -- 40 50 59 (background)
-*   1/4 -- 40 80 120 (main font color)
+I like **Murena Scheme** with some tweaks:
+
+*   0 -- 38 42 47 (background)
+*   1/4 -- 0 65 100 (main font color)
+*   6/3 -- 196 160 0 (yellow color for dirty branch)
