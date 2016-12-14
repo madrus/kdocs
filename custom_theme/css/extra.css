@@ -1,15 +1,118 @@
+/********
+VARIABLES
+********/
+/*****
+MIXINS
+*****/
+/*****
+LAYOUT
+*****/
 .wy-side-nav-search {
-  background-color: #F58220
+  background-color: #F58220;
 }
-
 .wy-nav-content {
   max-width: 1000px;
 }
-
-.wy-grid-for-nav li:before {
-  list-style-type: none;;
-  /*font-family: 'FontAwesome';
-  content: '\f067';
-  margin:0 5px 0 -15px;*/
-  color: #f00;
+/*************
+UNORDERED LIST
+*************/
+.rst-content .section .toc ul {
+  list-style: none;
+  padding: 0;
 }
+.rst-content .section .toc ul li {
+  margin-left: 0;
+  list-style: none;
+  padding-left: 1.3em;
+}
+.rst-content .section .toc ul li:before {
+  content: "\f054";
+  font-family: FontAwesome;
+  font-size: 0.75em;
+  display: inline-block;
+  color: #F58220;
+  margin-left: -1.3em;
+  width: 1.3em;
+}
+.rst-content .section .toc ul li li {
+  list-style: none;
+  padding-left: 1.3em;
+}
+.rst-content .section .toc ul li li:before {
+  content: "\f054";
+  font-family: FontAwesome;
+  font-size: 0.75em;
+  display: inline-block;
+  color: #F58220;
+  margin-left: -1.3em;
+  width: 1.3em;
+}
+.rst-content .section .toc ul li li li {
+  list-style: none;
+  padding-left: 1.3em;
+}
+.rst-content .section .toc ul li li li:before {
+  content: "\f054";
+  font-family: FontAwesome;
+  font-size: 0.75em;
+  display: inline-block;
+  color: #F58220;
+  margin-left: -1.3em;
+  width: 1.3em;
+}
+.rst-content .section .toc ul li ol li {
+  list-style: decimal;
+}
+.rst-content .section ul {
+  list-style: none;
+  padding: 0;
+}
+.rst-content .section ul li {
+  margin-left: 0;
+  list-style: none;
+  padding-left: 1.3em;
+}
+.rst-content .section ul li:before {
+  content: "\f061";
+  font-family: FontAwesome;
+  font-size: 0.75em;
+  display: inline-block;
+  color: #F58220;
+  margin-left: -1.3em;
+  width: 1.3em;
+}
+.rst-content .section ul li li {
+  list-style: none;
+  padding-left: 1.3em;
+}
+.rst-content .section ul li li:before {
+  content: "\f061";
+  font-family: FontAwesome;
+  font-size: 0.75em;
+  display: inline-block;
+  color: #F58220;
+  margin-left: -1.3em;
+  width: 1.3em;
+}
+.rst-content .section ul li li li {
+  list-style: none;
+  padding-left: 1.3em;
+}
+.rst-content .section ul li li li:before {
+  content: "\f061";
+  font-family: FontAwesome;
+  font-size: 0.75em;
+  display: inline-block;
+  color: #F58220;
+  margin-left: -1.3em;
+  width: 1.3em;
+}
+.rst-content .section ul li ol li {
+  list-style: decimal;
+}
+/***********
+ORDERED LIST
+***********/
+/**********
+BREADCRUMBS
+**********/
