@@ -15,7 +15,8 @@ after_success:
 - git remote add origin "https://${GH_TOKEN}@github.com/madrus/kdocs.git"
 - git branch gh-pages
 - git checkout gh-pages
-- git pull origin/gh-pages
+- git merge master
+- git fetch origin gh-pages
 - git checkout master
 - mkdocs gh-deploy;
 env:
