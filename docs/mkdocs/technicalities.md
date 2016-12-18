@@ -76,7 +76,7 @@ Go to your GitHub account and create a new **Personal access token** in your Dev
 
 In the Travis CI settings of your project add a new **GH_TOKEN** environment variable with the value of the hash string your have just copied. Don't forget to turn in **ON** and to **ADD**.
 
-Your `.travis.yml` config file may look something like this:
+Configure the `.travis.yml` file. You may start with something like this:
 
 ```yaml
 sudo: false
@@ -87,10 +87,14 @@ install:
 - pip install -r requirements.txt
 - pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
 script:
+- git config credential.helper "store --file=.git/credentials"
+- echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 - mkdocs build
 after_success:
 - mkdocs gh-deploy --force
 ```
+
+The credentials here are necessary for the Travis agent to be able to connect to your Github repository and perform the necessary actions with it. Note that the credentials are based on the **Personal access token** you have created.
 
 Next, you need to have **travis** Rubygem installed on your local machine. If not, install it:
 
@@ -98,7 +102,7 @@ Next, you need to have **travis** Rubygem installed on your local machine. If no
 gem install travis
 ```
 
-Now, add the encrypted token to `.travis.yml`: 
+Using **travis**, add the encrypted token to `.travis.yml`: 
 
 ```bash
 travis encrypt GH_TOKEN="the-token-from-github" --add
