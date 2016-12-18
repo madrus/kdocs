@@ -16,5 +16,6 @@ script:
 after_success:
   - git config user.name "Andre Roussakoff"
   - git config user.email "madrus@gmail.com"
-  - git remote add gh-token "https://${GH_TOKEN}@github.com/madrus/kdocs.git"
-  - mkdocs gh-deploy --clean --remote-name gh-token
+  - git remote add gh-token "https://${GH_TOKEN}@github.com/madrus/kdocs.git";
+  - git fetch gh-token gh-pages:gh-pages;
+  - mkdocs gh-deploy --clean --remote-name gh-token;
