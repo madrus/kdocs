@@ -90,11 +90,14 @@ script:
 - git config credential.helper "store --file=.git/credentials"
 - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 - mkdocs build
-after_success:
-- mkdocs gh-deploy --force
+- if [ $TRAVIS_TEST_RESULT == 0 ]; then
+    mkdocs gh-deploy --force;
+  fi
 ```
 
-The credentials here are necessary for the Travis agent to be able to connect to your Github repository and perform the necessary actions with it. Note that the credentials are based on the **Personal access token** you have created.
+The credentials here are necessary for the Travis agent to be able to connect to your Github repository and perform the necessary actions with it. Note that the credentials are based on the **Personal access token** you have created. 
+
+Also, I have put deployment inside the **script** fase instead of **after_success** as a workaround (see the tip of Chronial on this [Travis issue #758](https://github.com/travis-ci/travis-ci/issues/758)). Otherwise, the batch succeeds with a successful build even if deploy **fails** after it.
 
 Next, you need to have **travis** Rubygem installed on your local machine. If not, install it:
 
