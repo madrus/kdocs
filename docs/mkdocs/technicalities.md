@@ -69,31 +69,47 @@ This will push the **master**  branch to the remote **gh-pages**. After that, yo
 
 ### Deployment to GitHub pages via Travis CI
 
-Your `.travis.yml` file may look something like:
+Go to your GitHub account and create a new **Personal access token** in your Developer settings. Copy the hash string.
+
+!!! warning "Keep well the hash string!"
+    You will see it only once when you create it.
+
+In the Travis CI settings of your project add a new **GH_TOKEN** environment variable with the value of the hash string your have just copied. Don't forget to turn in **ON** and to **ADD**.
+
+Your `.travis.yml` config file may look something like this:
 
 ```yaml
 sudo: false
 language: python
 python: '2.7'
-
 install:
-  - pip install --upgrade pip
-  - pip install -r requirements.txt
-  - pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
-
+- pip install --upgrade pip
+- pip install -r requirements.txt
+- pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
 script:
-  - mkdocs build
-
+- mkdocs build
 after_success:
-  - mkdocs gh-deploy
+- mkdocs gh-deploy --force
 ```
 
-Go to your GitHub account and create a new **Personal access token** in your Developer settings. Copy the hash string. 
+Next, you need to have **travis** Rubygem installed on your local machine. If not, install it:
 
-In the Travis CI settings of your project add a new **GH_TOKEN** environment variable with the value of the hash string your have just copied. Don't forget to turn in **ON** and to **ADD**.
+```bash
+gem install travis
+```
+
+Now, add the encrypted token to `.travis.yml`: 
+
+```bash
+travis encrypt GH_TOKEN="the-token-from-github" --add
+```
+
+This will add the following block at the end of the file:
+
+```yaml
+env:
+  global:
+    - secure: "lots-of-seemingly-random-characters"
+```
 
 Now, when you push your changes to the remote **master**, Travis CI should publish the compiled website to **GitHub Pages** if the build succeeds.
-
-gem install travis
-travis encrypt GH_TOKEN="the-token-from-github" --add
-
