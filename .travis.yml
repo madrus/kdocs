@@ -13,4 +13,4 @@ script:
 after_success:
   - git config user.name "Andre Roussakoff"
   - git config user.email "madrus@gmail.com"
-  - mkdocs gh-deploy --clean --remote-name gh-deploy;
+  - mkdocs gh-deploy --clean --remote-name kdocs;
