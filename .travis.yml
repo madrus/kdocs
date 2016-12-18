@@ -2,18 +2,20 @@ sudo: false
 language: python
 python: '2.7'
 before_install:
-- echo -e "machine github.com\n  login ${GH_TOKEN}" >> ~/.netrc
+  - echo -e "machine github.com\n  login ${GH_TOKEN}" >> ~/.netrc
 install:
-- pip install --upgrade pip
-- pip install -r requirements.txt
-- pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
+  - pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
 script:
-- mkdocs build
+  - mkdocs build
 after_success:
   - git config credential.helper "store --file=.git/credentials"
   - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
-  - git remote add gh-token "https://${GH_TOKEN}@github.com/madrus/kdocs.git";
-  - mkdocs gh-deploy --clean --remote-name gh-token;
+  #- git remote add gh-token "https://${GH_TOKEN}@github.com/madrus/kdocs.git";
+  - mkdocs gh-deploy;
+  #- mkdocs gh-deploy --clean --remote-name gh-token;
+
 env:
   global:
     secure: dvrPhcqsXqBHdnNnmSEashVL2WXx4i/tY99tfXiEiWvXi+sayU6TFV0CARHk+flbVE8AOwZW7nbxrHrDhfdw1/b8ZCBdXpnKrsIV04gFdOZJ0SA/p6fqXTPeT/7B2D5fajSSRQAZGC6akz4MRI+TxcIpEeBJis5uuLgipFmB4fc6ciUcyv+QR7ms6o+fyWva+ox6hNzrlCJGv09BtyUuUpEdofwibYmSpkX5Cj/OzH5BQVwMZOet0QFBZUQbsYDymjThz5VV5ren2jrhpWmsuCwJDaCQLB4AbxM42cWAjd27GTouLxhTpMezIP5/AQg2CZF+7p/Brz7KoZnQIZLEnchPH4H0LsQS1uv2Nn3bCNVa6iuQPcvM3cRsrAribHeWcyHDR0+x4YENSESa93jPwvVnqUA1NfQB2gm0NY8o0ig0sozpL5p44K/KuEGKLNwUJVe7rbFM4Dh6YGJmxDL/DOfWGAbw9pcnTBsJ5BjNGqVvn30ODvbYQ9yO73dNh4rdOwvVdMfz9yrCgCl4NQAe5ukU+Zozo1KUfpGjwpOiZ/mRC3sdRhGGt7YhyDE2igZiRVZAOt3oZTdT82OIJyvOZj+j4HFihJIYVyDL5a0Oziac9N8EmqgdORyoA46JByuPwaLedQJP4mSAiAqmvtS5PPNHkl3+VQxAUckb6Ox4CyI=
