@@ -11,5 +11,5 @@ script:
   - mkdocs build
 
 after_success:
-  - git remote add gh-token "https://${GH_TOKEN}@github.com/madrus/mkdocs.git"
+  - git remote add gh-token "https://${GH_TOKEN}@github.com/madrus/kdocs.git"
   - mkdocs gh-deploy --clean --remote-name gh-token
