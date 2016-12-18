@@ -46,3 +46,42 @@ Then add the below to your `mkdocs.yml` file.
 markdown_extensions:
   - fontawesome_markdown`
 ```
+
+### Deployment to GitHub Pages
+
+Create a new public **gh-pages** branch on your GitHub account. Then run this command:
+
+```bash
+mkdocs gh-deploy
+```
+
+This will push the **master**  branch to the remote **gh-pages**. After that, you can view your website here:
+
+[http://your-github-name.github.io/mkdocs-repo-name](http://your-github-name.github.io/mkdocs-repo-name)
+
+### Deployment to GitHub pages via Travis CI
+
+Your `.travis.yml` file may look something like:
+
+```yaml
+sudo: false
+language: python
+python: '2.7'
+
+install:
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
+  - pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
+
+script:
+  - mkdocs build
+
+after_success:
+  - mkdocs gh-deploy
+```
+
+Go to your GitHub account and create a new **Personal access token** in your Developer settings. Copy the hash string. 
+
+In the Travis CI settings of your project add a new **GH_TOKEN** environment variable with the value of the hash string your have just copied. Don't forget to turn in **ON** and to **ADD**.
+
+Now, when you push your changes to the remote **master**, Travis CI should publish the compiled website to **GitHub Pages** if the build succeeds.
