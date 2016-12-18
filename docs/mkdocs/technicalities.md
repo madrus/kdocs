@@ -93,3 +93,7 @@ Go to your GitHub account and create a new **Personal access token** in your Dev
 In the Travis CI settings of your project add a new **GH_TOKEN** environment variable with the value of the hash string your have just copied. Don't forget to turn in **ON** and to **ADD**.
 
 Now, when you push your changes to the remote **master**, Travis CI should publish the compiled website to **GitHub Pages** if the build succeeds.
+
+gem install travis
+travis encrypt GH_TOKEN="the-token-from-github" --add
+
