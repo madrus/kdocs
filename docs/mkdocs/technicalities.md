@@ -49,7 +49,15 @@ markdown_extensions:
 
 ### Deployment to GitHub Pages
 
-Create a new public **gh-pages** branch on your GitHub account. Then run this command:
+The first step you'll need to do is simply make sure you have a **gh-pages** branch that exists, if it doesn't:
+
+```bash
+git checkout -b gh-pages
+git rm -rf .
+git push --set-upstream origin gh-pages
+```
+
+Then run this command:
 
 ```bash
 mkdocs gh-deploy
