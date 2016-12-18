@@ -10,14 +10,15 @@ script:
 - git config user.email "madrus@gmail.com"
 - git config credential.helper "store --file=.git/credentials"
 - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
-- git remote add travis "https://${GH_TOKEN}@github.com/madrus/kdocs.git"
-- git branch gh-pages
-- git checkout gh-pages
-- git fetch travis
-- git checkout master
+- git branch
+#- git remote add travis "https://${GH_TOKEN}@github.com/madrus/kdocs.git"
+#- git branch gh-pages
+#- git checkout gh-pages
+#- git pull travis gh-pages
+#- git checkout master
 - mkdocs build
 after_success:
-- mkdocs gh-deploy
+- mkdocs gh-deploy --force
 env:
   global:
     secure: DAZ+nNR8ecgRUcduj45BCSARpm4ZdqIEvikiz28BiJ49iTMnHJBZwLQ8PpzfNZoB8PAKtScoRFKxC1BQSW90kS8gjUjwPO8TgmRnVdT4KNTNUZV8fIzhKBpOt+k4M6/FBjdW0h+YLBCIgFVPa4EhEGafAy5fy9TdLpv/hM8NxbAiSsongpYZr9FWTSwh2be1umASqVBilR6ue+kwDwMX8do8QvVyNca1ynRXpp4RkqdvUEJBYP+vHRFX79kJYxwePXm2TvIyKgpyV0fZnwlwonZfqtN+siAyt2m4dYH3CJfmPSAiHI5qxLSxUOPo9EQVfm21PUVZoO/mWevdTGNJTtfSjGhPC+1Knf+db5i4RFC2YsPRSASKWfbo1m/mDDuzJAjBQAKpWYXlYfJ6hB/EPx2/qVCOkTFinhjxupObjVVudG8cG6MDa6QHVxB7PEZ5bb3GfvyJWDrAGOcuVCwNMBaNiiQGPuG7+sG90QVrl25k7SwnP0Tm10aPWTNmW4QJhkJkgQZaFbWPuskdxKLqdHpScAsT4TGOgG5yjbW0DIoqw9pWHGV4PoPzMwPQVdr8+cD/iMdiHFVZe30hFnZ7LhNx+qGSigTcEpEA8FfnKrwk9kMhgcQhmF3SRgzOVJ88Ggc2cfVWQKJy/dXVHu+RxyXzCGMlk5lNcbqjFOO7uyM=
