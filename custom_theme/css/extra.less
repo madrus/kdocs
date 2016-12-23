@@ -17,7 +17,7 @@ VARIABLES
 /*****
 MIXINS
 *****/
-.bullet_style(@bullet_char, @bullet_size: inherit) {
+.bullet_style(@bullet_char, @bullet_size:inherit) {
     content: @bullet_char;
     font-family: FontAwesome;
     font-size: @bullet_size;
@@ -27,7 +27,7 @@ MIXINS
     width: @bullet_padding;
 }
 
-.bullet_list_style(@bullet_char, @bullet_size: inherit) {
+.bullet_list_style(@bullet_char, @bullet_size:inherit) {
     list-style: none;
     padding-left: @bullet_padding;
 
@@ -36,7 +36,7 @@ MIXINS
     }
 }
 
-.list_style(@bullet_color, @bullet_char, @bullet_size: inherit) {
+.list_style(@bullet_color, @bullet_char, @bullet_size:inherit) {
     list-style: none;
     padding: 0;
 
@@ -66,6 +66,10 @@ LAYOUT
 
 .wy-nav-content {
     max-width: 1000px;
+}
+
+p > code {
+    font-size: 100%;
 }
 /*************
 UNORDERED LIST

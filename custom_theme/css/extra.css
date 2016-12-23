@@ -13,6 +13,9 @@ LAYOUT
 .wy-nav-content {
   max-width: 1000px;
 }
+p code {
+  font-size: 100%;
+}
 /*************
 UNORDERED LIST
 *************/

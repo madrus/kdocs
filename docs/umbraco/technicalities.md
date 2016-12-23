@@ -2,7 +2,7 @@
 
 [TOC]
 
-## Using SSL in Production
+### Using SSL in Production
 
 (This is a tip of **Sebastiaan Janssen** at [Our Umbraco](https://our.umbraco.org/forum/umbraco-7/using-umbraco-7/57637-Auto-redirect-to-HTTPS-for-some-pages-in-MVC).)
 
@@ -14,11 +14,21 @@ Our aim is to use **SSL** in Production and to issue an `automatic 301-redirect`
 In order to achieve this, several things have to be done. This is based on GoDaddy's hosting, so for SSL one needs to buy their
 
 !!! warning "GoDaddy does not specialize on Windows hosting"
-    Unfortunately, the Windows hosting support of GoDaddy ends up when the place there minimal `index.html` file in the root directory and can successfully view that page in the browser.
+    Unfortunately, the Windows hosting support of GoDaddy ends up when they place a minimal `index.html` file in the root directory and can successfully view their own page in the browser. Then they say, "It works!", so it is your own problem.
 
 **Step 1** Configure the Production web server
 
-Go to `Websites & Domains` and choose `Web Server Settings`. Check `Require SSL` checkbox to prevent non-secure access to the website. Don't forget to save the changes.
+Go to `Websites & Domains` and choose `Web Server Settings`. Make sure the `Require SSL` checkbox **is not checked**. The redirect makes this setting unnecessary. Don't forget to save the changes.
+
+If this setting is checked and you go to the unsecure version of the URL, e.g. http://energydiet4u.nl, you see the following browser error:
+
+```none
+Forbidden
+You do not have permission to access this document.
+Web Server at energydiet4u.nl
+```
+
+If this setting is not checked, you are redirected to the `https` version of the URL: https://energydiet4u.nl.
 
 **Step 2** Create the SSL Certificate
 
@@ -73,7 +83,7 @@ type="text/css" rel="stylesheet"/>
 
 Notice that `http:` has been removed. This way it will load over both https and also over http (if you ever decide to revert to http).
 
-## robots.txt
+### robots.txt
 
 1. install [Cultiv DynamicRobots](https://our.umbraco.org/projects/website-utilities/cultiv-dynamicrobots/) and [Robots.txt Editor](http://our.umbraco.org/projects/developer-tools/robotstxt-editor) packages in the Umbraco backend.
 2. (I am not yet sure if this is a good option) intall the [Cultiv SearchEngineSitemap](http://our.umbraco.org/projects/website-utilities/cultiv-search-engine-sitemap) package, which supports multisite solutions out of the box.
