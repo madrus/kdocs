@@ -23,7 +23,7 @@ Most of the information comes from [here](https://our.umbraco.org/forum/develope
   </appSettings>
 ```
 
-#### Web Deployment - Could not find part of the path
+### Web Deployment - Could not find part of the path
 
 #### Question
 
@@ -43,7 +43,7 @@ and add the following key to the `PropertyGroup` section:
 <AutoParameterizationWebConfigConnectionStrings>False</AutoParameterizationWebConfigConnectionStrings>
 ```
 
-#### Web Deployment - Group policy prevents Roslyn's csc.exe from running
+### Web Deployment - Group policy prevents Roslyn's csc.exe from running
 
 #### Question
 
