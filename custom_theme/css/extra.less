@@ -1,4 +1,4 @@
-// out: ./extra.css, sourcemap: false, compress: false
+// out: ./extra.css, sourcemap: true, compress: false
 // main: ./extra.less
 /********
 VARIABLES
@@ -57,6 +57,7 @@ MIXINS
         }
     }
 }
+
 /*****
 LAYOUT
 *****/
@@ -68,9 +69,10 @@ LAYOUT
     max-width: 1000px;
 }
 
-p > code {
+p> code, li > code {
     font-size: 100%;
 }
+
 /*************
 UNORDERED LIST
 *************/

@@ -13,7 +13,8 @@ LAYOUT
 .wy-nav-content {
   max-width: 1000px;
 }
-p code {
+p > code,
+li > code {
   font-size: 100%;
 }
 /*************

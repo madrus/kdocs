@@ -23,6 +23,7 @@ pages:
     - Styling: git/styling.md
   - Umbraco:
     - Technicalities: umbraco/technicalities.md
+    - FAQ: umbraco/faq.md
   - Vue.js:
     - Basics: vuejs/basics.md
   - Playground:
