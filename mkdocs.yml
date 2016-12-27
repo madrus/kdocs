@@ -18,6 +18,7 @@ pages:
   - Aurelia:
     - Technicalities: aurelia/technicalities.md
   - .NET Core:
+    - Notes: dotnet/notes.md
     - Tips: dotnet/tips.md
   - Git:
     - Styling: git/styling.md
