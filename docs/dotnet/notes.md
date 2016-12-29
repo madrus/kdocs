@@ -275,35 +275,17 @@ products.Select(p => $"{nameof(p.Name)}: {p.Name}, {nameof(p.Price)}: {p.Price}"
 
 but then we will get intellisense and type safety.
 
-### Workflow with an empty project
+### The JSON Configuration Files
 
-* create a new empty ASP.NET Core project
-* add `"Microsoft.AspNetCore.Mvc": "1.0.1"` dependency in `project.json`
-* add `"System.Net.Http": "4.1.0"` dependency in `project.json`
-* add `Mvc` to `Startup.cs`:
-
-```csharp
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-
-namespace LanguageFeatures
-{
-    public class Startup
-    {
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddMvc();
-        }
-
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
-        {
-            app.UseMvcWithDefaultRoute();
-        }
-    }
-}
-```
+| Name | Description |
+| :---- | :---- |
+| global.json | This file, which is found in the Solution Items folder, is responsible for telling Visual Studio where to find the projects in the solution and which version of the .NET execution environment should be used to run the application.  |
+| launchSettings.json | This file, which is revealed by expanding the Properties item in the MVC application project, is used to specify how the application is started. |
+| appsettings.json | This file is used to define application-specific settings. |
+| bower.json | This file is used by Bower to list the client-side packages that are installed into the project. |
+| bundleconfig.json | This file is used to bundle and minify JavaScript and CSS files. |
+| project.json | This file is used to specify the NuGet packages that are installed into the application. This file is also used for other project settings. |
+| project.lock.json | This file, which is revealed by expanding the project.json item in the Solution Explorer, contains detailed dependencies between packages installed in the project. It is generated automatically and should not be edited manually. |
 
 ### Razor
 
