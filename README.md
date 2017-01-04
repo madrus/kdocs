@@ -4,7 +4,7 @@ In this documentation, I am collecting tips and tricks that at some point proved
 
 The website can be seen at http://madrus4u.com/kdocs/.
 
-## Basic Installation
+### Basic Installation
 
 * `sudo pip install mkdocs`
 * `mkdocs --version`
@@ -12,7 +12,7 @@ The website can be seen at http://madrus4u.com/kdocs/.
 * `cd kdocs`
 * `curl 'https://jaspervdj.be/lorem-markdownum/markdown.txt' > docs/about.md` -- Add a new dummy page
 
-## Installing prerequisites
+### Installing prerequisites
 
 In order to view the documents offline, you need **Python** and the following dependencies:
 
@@ -23,7 +23,7 @@ sudo pip install mkdocs-alabaster mkdocs-cinder
 sudo pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
 ```
 
-## Running the project in DEV
+### Running the project in DEV
 
 Open the command prompt in the project root directory and type:
 
@@ -31,7 +31,7 @@ Open the command prompt in the project root directory and type:
 mkdocs serve
 ```
 
-## Styling
+### Styling
 
 Add some bits and pieces to mkdocs.yml:
 
@@ -45,13 +45,13 @@ theme: readthedocs
 
 You will notice that the website will look like __FeinCMS__ [documentation][feincms].
 
-## Building the site
+### Building the site
 
 * `mkdocs build` -- build the site
 * `printf "site/" >> .gitignore`
 * `mkdocs build --clean` -- build and clean stale files
 
-## Material theme
+### Material theme
 
 * `pip install mkdocs-material`
 * add `theme: 'material'` to the `mkdocs.yml`
@@ -61,17 +61,17 @@ You will notice that the website will look like __FeinCMS__ [documentation][fein
 
 See for more details the [Material for MkDocs][material] page. Also a full example configuration for a [mkdocs.yml][full-config].
 
-## Other useful commands
+### Other useful commands
 
 * `mkdocs --help`
 * `mkdocs build --help`
 
-## Deploying to GitHub pages
+### Deploying to GitHub pages
 
 * `git push -u origin master`
 * `mkdocs gh-deploy` -- this will build the docs and use [ghp-import][ghp] tool to commit them to the gh-pages branch and push the gh-pages branch to GitHub. Use `mkdocs gh-deploy --help` to get a full list of options available for the `gh-deploy` command.
 
-## Read the Docs
+### Read the Docs
 
 [Read the Docs][rtdocs] offers free documentation hosting. You can import your docs using any major version control system, including Mercurial, Git, Subversion, and Bazaar. Read the Docs supports MkDocs out-of-the-box. Follow the [instructions][instructions] on their site to arrange the files in your repository properly, create an account and point it at your publicly hosted repository. If properly configured, your documentation will update each time you push commits to your public repository.
 
