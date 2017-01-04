@@ -1,35 +1,40 @@
-// out: ./extra.css, sourcemap: true, compress: false
+
+// out: ./extra.min.css, sourcemap: true, compress: true
 // main: ./extra.less
-/********
-VARIABLES
-********/
-@movir_oranje: #F58220;
-@bullet_padding: 1.3em;
-@bullet_standard_size: 0.75em;
-@fa_chevron_right: "\f054";
-@fa_chevron_circle_right: "\f138";
-@fa_caret_right: "\f0da";
-@fa_circle: "\f111";
-@fa_circle_o: "\f10c";
-@fa_arrow_right: "\f061";
-@fa_arrow_circle_right: "\f0a9";
-@fa_asterisk: "\f069";
-/*****
-MIXINS
-*****/
+/**********
+ VARIABLES
+**********/
+@movir_oranje            : #F58220;
+@bullet_padding          : 1.3em;
+@bullet_standard_size    : 0.75em;
+@fa_chevron_right        : "\f054";
+@fa_chevron_circle_right : "\f138";
+@fa_caret_right          : "\f0da";
+@fa_circle               : "\f111";
+@fa_circle_o             : "\f10c";
+@fa_arrow_right          : "\f061";
+@fa_arrow_circle_right   : "\f0a9";
+@fa_asterisk             : "\f069";
+
+/*******
+ MIXINS
+*******/
 .bullet_style(@bullet_char, @bullet_size:inherit) {
-    content: @bullet_char;
-    font-family: FontAwesome;
-    font-size: @bullet_size;
-    display: inline-block;
-    color: @movir_oranje;
-    margin-left: -@bullet_padding;
-    width: @bullet_padding;
+    content     : @bullet_char;
+
+    display     : inline-block;
+
+    width       : @bullet_padding;
+    margin-left : -@bullet_padding;
+
+    font-family : FontAwesome;
+    font-size   : @bullet_size;
+    color       : @movir_oranje;
 }
 
 .bullet_list_style(@bullet_char, @bullet_size:inherit) {
-    list-style: none;
-    padding-left: @bullet_padding;
+    padding-left : @bullet_padding;
+    list-style   : none;
 
     &:before {
         .bullet_style(@bullet_char, @bullet_size);
@@ -37,45 +42,39 @@ MIXINS
 }
 
 .list_style(@bullet_color, @bullet_char, @bullet_size:inherit) {
-    list-style: none;
-    padding: 0;
+    padding    : 0;
+    list-style : none;
 
     li {
-        margin-left: 0;
         .bullet_list_style(@bullet_char, @bullet_size);
+        margin-left : 0;
 
         li {
             .bullet_list_style(@bullet_char, @bullet_size);
-
             li {
                 .bullet_list_style(@bullet_char, @bullet_size);
             }
         }
-
         ol li {
-            list-style: decimal;
+            list-style : decimal;
         }
     }
 }
 
-/*****
-LAYOUT
-*****/
+/*******
+ LAYOUT
+*******/
 .wy-side-nav-search {
-    background-color: @movir_oranje;
+    background-color : @movir_oranje;
 }
 
 .wy-nav-content {
-    max-width: 1000px;
+    max-width : 1000px;
 }
 
-p> code, li > code {
-    font-size: 100%;
-}
-
-/*************
-UNORDERED LIST
-*************/
+/***************
+ UNORDERED LIST
+***************/
 .rst-content .section .toc ul {
     .list_style(@movir_oranje, @fa_chevron_right, @bullet_standard_size);
 }
@@ -83,55 +82,13 @@ UNORDERED LIST
 .rst-content .section ul {
     .list_style(@movir_oranje, @fa_arrow_right, @bullet_standard_size);
 }
-/***********
-ORDERED LIST
-***********/
-// .rst-content .section ol,
-// .rst-content ol.arabic,
-// .wy-plain-list-decimal,
-// article ol {
-//     list-style: decimal;
-//     // line-height: 24px;
-//     // margin-bottom: 24px;
-//     li {
-//         list-style: decimal;
-//         // margin-left: 24px;
-//         //
-//         // p:last-child {
-//         //     margin-bottom: 0;
-//         // }
-//         ul {
-//             // margin-bottom: 0;
-//             li {
-//                 list-style: disc;
-//             }
-//         }
-//     }
-// }
-/**********
-BREADCRUMBS
-**********/
-// .wy-breadcrumbs li {
-//     display: inline-block;
-//
-//     &.wy-breadcrumbs-aside {
-//         float: right;
-//     }
-//
-//     a {
-//         display: inline-block;
-//         padding: 5px;
-//
-//         &:first-child {
-//             padding-left: 0;
-//         }
-//     }
-// }
-// .wy-breadcrumbs-extra {
-//     margin-bottom: 0;
-//     color: #b3b3b3;
-//     font-size: 80%;
-//     display: inline-block;
-// }
 
-/*# sourceMappingURL=extra.css.map */
+/*****
+ CODE
+*****/
+code {
+    p > &, li > & {
+        font-size : 100%;
+    }
+}
+

@@ -26,7 +26,7 @@ pages:
   - Umbraco:
     - Technicalities: umbraco/technicalities.md
     - FAQ: umbraco/faq.md
-  - Vue.js:
+  - Vue.js: 
     - Basics: vuejs/basics.md
   - Playground:
     - TODOs: playground/todo.md
@@ -36,13 +36,8 @@ pages:
 docs_dir: 'docs'
 theme: readthedocs
 theme_dir: custom_theme
-# theme: cerulean
-# theme: flatly
-# theme: slate
-# theme: cinder
-# theme: alabaster
-# theme: bootstrap
-extra_css: [css/extra.css]
+extra_css: 
+  - css/extra.min.css
 extra_javascript: []
 
 # Options

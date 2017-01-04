@@ -25,7 +25,7 @@
 
 **Special words**
 
-These special words result in a colored adminition blocks. It is nice to experiment with them.
+These special words result in a colored adminition blocks. It is nice to experiment with them.____
 
 * `note`, `seealso` - light blue
 * `important`, `hint`, `tip` - green
@@ -90,9 +90,9 @@ The word "warning" plus custom title...
 
 Adding
 
-```yaml
-  - smarty:
-      smart_angled_quotes: true
+```ruby
+- smarty:
+  smart_angled_quotes: true
 ```
 
 to `markdown_extentions` gives you the possibility to print out nicely looking ASCII dashes, quotes and ellipes:
@@ -121,8 +121,8 @@ You get:
 
 Adding
 
-```yaml
-  - nl2br
+```ruby
+- nl2br
 ```
 
 to `markdown_extentions` creates a newline within fences when you make a newline in Markdown. You type:
@@ -134,7 +134,7 @@ line 2
 
 Without `nl2br` you see this:
 
-```none
+``` none
 line 1 line 2
 ```
 
@@ -143,4 +143,28 @@ With `nl2br` you see this:
 ```none
 line 1
 line 2
+```
+
+### Custom Theme
+
+It is possible to add extra customization via a **Custom Theme** option.
+
+* create the `custom_theme` and `custom_theme/css` directories under `doc_dir` (see `mkdocs.yml` file)
+* inside the `custom_theme/css` directory create `extra.less` file with your styles
+* use any LESS compiler to compile the `extra.less` file to the minified `extra.min.css` and its map `extra.min.css.map`
+* add the following lines to `mkdoc.yml` under the `doc_dir` variable:
+
+```ruby
+  theme_dir: custom_theme
+  extra_css: 
+  - css/extra.min.css
+```
+
+* now when you build and serve the website, you should see the custom styling in action
+
+Similarly, it is possible to add extra JavaScript inside the `custom_theme/js` directory. You add the corresponding setting to the `mkdocs.yml` file:
+
+```ruby
+  extra_javascript: 
+  - js/your-js-file.min.js
 ```
