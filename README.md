@@ -21,7 +21,7 @@ sudo pip install mkdocs pygments pymdown-extensions
 sudo pip install mkdocs-bootstrap mkdocs-bootswatch
 sudo pip install mkdocs-alabaster mkdocs-cinder
 sudo pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
-```
+```mat
 
 ### Running the project in DEV
 
