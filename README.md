@@ -1,8 +1,14 @@
 # Notes on Madrus's Docs
 
+[TOC]
+
+---
+
 In this documentation, I am collecting tips and tricks that at some point proved to be useful. I am doing it "along the way": every time I get stuck and later later find the solution. Therefore, it is never complete and finished. **It is always work in progress**.
 
 The website can be seen at http://madrus4u.com/kdocs/.
+
+---
 
 ### Basic Installation
 
@@ -11,6 +17,8 @@ The website can be seen at http://madrus4u.com/kdocs/.
 * `mkdocs new kdocs`
 * `cd kdocs`
 * `curl 'https://jaspervdj.be/lorem-markdownum/markdown.txt' > docs/about.md` -- Add a new dummy page
+
+---
 
 ### Installing prerequisites
 
@@ -31,6 +39,8 @@ Open the command prompt in the project root directory and type:
 mkdocs serve
 ```
 
+---
+
 ### Styling
 
 Add some bits and pieces to mkdocs.yml:
@@ -45,11 +55,15 @@ theme: readthedocs
 
 You will notice that the website will look like __FeinCMS__ [documentation][feincms].
 
+---
+
 ### Building the site
 
 * `mkdocs build` -- build the site
 * `printf "site/" >> .gitignore`
 * `mkdocs build --clean` -- build and clean stale files
+
+---
 
 ### Material theme
 
@@ -61,15 +75,21 @@ You will notice that the website will look like __FeinCMS__ [documentation][fein
 
 See for more details the [Material for MkDocs][material] page. Also a full example configuration for a [mkdocs.yml][full-config].
 
+---
+
 ### Other useful commands
 
 * `mkdocs --help`
 * `mkdocs build --help`
 
+---
+
 ### Deploying to GitHub pages
 
 * `git push -u origin master`
 * `mkdocs gh-deploy` -- this will build the docs and use [ghp-import][ghp] tool to commit them to the gh-pages branch and push the gh-pages branch to GitHub. Use `mkdocs gh-deploy --help` to get a full list of options available for the `gh-deploy` command.
+
+---
 
 ### Read the Docs
 
