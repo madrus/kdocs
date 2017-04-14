@@ -35,7 +35,11 @@ sudo pip install https://github.com/bmcorser/fontawesome-markdown/archive/master
 
 Open the command prompt in the project root directory and type:
 
-```bash
+```bash<div class="item range range-stable">
+	<i class="icon ion-volume-low"></i>
+	<input type="range" name="volume" min="0" max="100" value="33">
+	<i class="icon ion-volume-high"></i>
+</div>
 mkdocs serve
 ```
 
