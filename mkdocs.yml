@@ -23,6 +23,7 @@ pages:
     - Tips: dotnet/tips.md
   - Git:
     - Styling: git/styling.md
+    - SSH: git/ssh.md
   - Umbraco:
     - Technicalities: umbraco/technicalities.md
     - FAQ: umbraco/faq.md
