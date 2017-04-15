@@ -22,7 +22,7 @@ SSH keys are stored locally in `%USERPROFILE%/.ssh` directory. If it does not ex
 * Open your command prompt and type `puttygen`. This will open the generator screen.
 * Click `Generate` to generate a new key and move your mouse across the white area.
 * Type in the passphrase (__remember it wel!__) and save the private key to `%USERPROFILE%\.ssh` directory as `id_rsa.ppk`.
-    ![puttygen](../images/ssh_new.png)
+    ![puttygen](../img/ssh_new.png)
 * Also, save the __OpenSSH__ version of the key as `id_rsa` file via the top menu `Conversions` -> `Export OpenSSH key`.
 
 #### Add a new SSH key via SSH-KEYGEN
@@ -72,14 +72,13 @@ SSH keys are stored locally in `%USERPROFILE%/.ssh` directory. If it does not ex
 * in its menu, go to `Repository`, `Remote repositories...` and create a new remote repository. Call it `origin` (or any other name you like). 
 * Copy the SSH url of the BitBucket repo and paste it in the `Url` field
 * For the `PuTTY SSH` field, browse to the private key in `.ssh` directory and pick it up
-    ![remote ssh](../images/ssh_remote.png)
+    ![remote ssh](../img/ssh_remote.png)
 * Click on `Load SSH key` and type in your passphrase for the private key
 * Test connection with `Test connection`
 * If everything is ok, save changes and close
 * Click on the light blue down arrow, choose `Pull`, fill in the right remote branch, e.g. `master` and choose `Merge remote branch into current branch`
-    ![pull via ssh](../images/ssh_pull.png)
+    ![pull via ssh](../img/ssh_pull.png)
 * Click the `Pull` button
 * If everything went fine, you should now see the branch tree with all the commits
 
 ---
-

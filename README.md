@@ -1,9 +1,5 @@
 # Notes on Madrus's Docs
 
-[TOC]
-
----
-
 In this documentation, I am collecting tips and tricks that at some point proved to be useful. I am doing it "along the way": every time I get stuck and later later find the solution. Therefore, it is never complete and finished. **It is always work in progress**.
 
 The website can be seen at http://madrus4u.com/kdocs/.
@@ -22,24 +18,20 @@ The website can be seen at http://madrus4u.com/kdocs/.
 
 ### Installing prerequisites
 
-In order to view the documents offline, you need **Python** and the following dependencies:
+In order to view the documents offline, you need __Python__ and the following dependencies:
 
 ```bash
 sudo pip install mkdocs pygments pymdown-extensions
 sudo pip install mkdocs-bootstrap mkdocs-bootswatch
 sudo pip install mkdocs-alabaster mkdocs-cinder
 sudo pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
-```mat
+```
 
 ### Running the project in DEV
 
 Open the command prompt in the project root directory and type:
 
-```bash<div class="item range range-stable">
-	<i class="icon ion-volume-low"></i>
-	<input type="range" name="volume" min="0" max="100" value="33">
-	<i class="icon ion-volume-high"></i>
-</div>
+```bash
 mkdocs serve
 ```
 

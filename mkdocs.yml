@@ -1,9 +1,9 @@
 # Project information
 site_name: "Madrus's Docs"
 site_description: 'A short description of my project'
-site_author: 'Madrus'
+site_author: Madrus
 site_url: 'https://madrus.github.io/kdocs'
-site_favicon: 'images/favicon.ico'
+site_favicon: 'img/favicon.ico'
 
 # Repository
 #repo_name: 'GitHub'  # will it work with GitLab?
@@ -12,9 +12,9 @@ repo_url: 'https://github.com/madrus/kdocs'
 # Pages structure
 pages:
   - Home: index.md
-  - MkDocs:
-    - Technicalities: mkdocs/technicalities.md
-    - Styling: mkdocs/styling.md
+  - MkDocs Engine:
+    - Technicalities: engine/technicalities.md
+    - Styling: engine/styling.md
   - Aurelia:
     - Technicalities: aurelia/technicalities.md
   - .NET Core:
@@ -34,19 +34,17 @@ pages:
     - Test Document: playground/test.md
 
 # Documentation and theme
-docs_dir: 'docs'
+docs_dir: docs
 theme: readthedocs
 theme_dir: custom_theme
-extra_css: 
+extra_css:
   - css/extra.min.css
-extra_javascript: []
 
 # Options
 extra:
-  version: 0.1.0
-  logo: 'images/logo.png'
+  version: 0.2.0
+  logo: 'img/logo.png'
 
-# Extensions
 markdown_extensions:
   - admonition
   - codehilite(css_class=code):
