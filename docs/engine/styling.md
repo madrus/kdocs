@@ -2,6 +2,8 @@
 
 [TOC]
 
+---
+
 ### Admonition extension
 
 !!! warning "This does not always work correctly with Material theme"
@@ -9,21 +11,21 @@
 
 [Admonition extension](https://pythonhosted.org/Markdown/extensions/admonition.html) for the MkDocs Markdown provides for a way to draw attention of the reader. In order to use this extension
 
-**Syntax**
+__Syntax__
 
 ```none
 !!! special_word "some text within double quotes"
     Any number of lines aligned with the special_word
 ```
 
-1. 3 exclamation marks ( **!!!** ) at the beginning of the line
+1. 3 exclamation marks ( __!!!__ ) at the beginning of the line
 2. 1 space
 3. 1 special word (see below)
 4. 1 space
 5. (optional) some text within double quotes
 6. (optional) any number of lines beginning at pos. 4 (aligned with the special word after the exclamation marks)
 
-**Special words**
+__Special words__
 
 These special words result in a colored adminition blocks. It is nice to experiment with them.____
 
@@ -32,9 +34,9 @@ These special words result in a colored adminition blocks. It is nice to experim
 * `warning`, `caution`, `attention` - beige/brown
 * `danger`, `error` - pink/red
 
-**NOTE:** The special word can be also any other word. In that case, the color will always be light blue.
+__NOTE:__ The special word can be also any other word. In that case, the color will always be light blue.
 
-**Some examples**
+__Some examples__
 
 A custom text message on the first line...
 
@@ -92,7 +94,7 @@ Adding
 
 ```ruby
 - smarty:
-  smart_angled_quotes: true
+    smart_angled_quotes: true
 ```
 
 to `markdown_extentions` gives you the possibility to print out nicely looking ASCII dashes, quotes and ellipes:
@@ -116,6 +118,8 @@ You get:
 ... ellipsis
 -- ndash
 --- mdash
+
+---
 
 ### nl2br extension
 
@@ -145,9 +149,11 @@ line 1
 line 2
 ```
 
+---
+
 ### Custom Theme
 
-It is possible to add extra customization via a **Custom Theme** option.
+It is possible to add extra customization via a __Custom Theme__ option.
 
 * create the `custom_theme` and `custom_theme/css` directories under `doc_dir` (see `mkdocs.yml` file)
 * inside the `custom_theme/css` directory create `extra.less` file with your styles
@@ -168,3 +174,5 @@ Similarly, it is possible to add extra JavaScript inside the `custom_theme/js` d
   extra_javascript: 
   - js/your-js-file.min.js
 ```
+
+---

@@ -2,6 +2,8 @@
 
 [TOC]
 
+---
+
 ### Font Awesome in Aurelia project
 
 Add new `prepare-font-awesome.ts` task file to `aurelia_project/tasks`:
@@ -70,7 +72,7 @@ Finally, add
 
 to `wwwroot/index.html`. Now, if you run `au build`, you will see two new directories created under `wwwwroot/scripts`:
 
-*   css
-*   fonts
+* css
+* fonts
 
-and inside these folders the **Font Awesome** stylesheet and fonts.
+and inside these folders the __Font Awesome__ stylesheet and fonts.

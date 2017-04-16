@@ -2,6 +2,8 @@
 
 [TOC]
 
+---
+
 ### Dotnet Command Prompt
 
 Run the web application on a specified port, e.g. 10000, via
@@ -10,9 +12,11 @@ Run the web application on a specified port, e.g. 10000, via
 dotnet run --server.urls http://127.0.0.1:10000
 ```
 
+---
+
 ### Dotnet NuGet Packages
 
-Using command `dotnet pack` we can actually create a **NuGet** package from our project. This command will create two files in `bin/debug/[runtime]` directory:
+Using command `dotnet pack` we can actually create a __NuGet__ package from our project. This command will create two files in `bin/debug/[runtime]` directory:
 
 * `DNXConsoleDemo.1.0.0.nupkg`
 * `DNXConsoleDemo.1.0.0.symbols.nupkg`
@@ -22,23 +26,27 @@ Actually, the `.nupkg` files are just `.zip` files. If you rename the extension,
 !!! important "Application as a NuGet package"
     It should now be possible to install your project as a NuGet package.
 
+---
+
 ### Some Definitions
 
-**ASP.NET Services** = objects that provide functionality to other parts of the application. Services registered in the `Startup.ConfigureServices` method can be accessed by creating a constructor that accepts an argument of the required service type.
+__ASP.NET Services__ = objects that provide functionality to other parts of the application. Services registered in the `Startup.ConfigureServices` method can be accessed by creating a constructor that accepts an argument of the required service type.
 
-**ConfigureServices** method hooks into the service registry all of the services we want our application to make use of. It is configuring the types of services that can be used in the infrastructur altogether.
+__ConfigureServices__ method hooks into the service registry all of the services we want our application to make use of. It is configuring the types of services that can be used in the infrastructur altogether.
 
-**Configure** methods configures the behavior of the registered services.
+__Configure__ methods configures the behavior of the registered services.
 
-**Middleware** = components that are combined to form the **request pipeline**.
+__Middleware__ = components that are combined to form the __request pipeline__.
 
-**AddTransient** = every time we call for the service to be used, we would get a new instance of the service from the **DI Framework**.
+__AddTransient__ = every time we call for the service to be used, we would get a new instance of the service from the __DI Framework__.
 
-**AddScoped** = same instance of the service is used in all stages of the middleware pipeline for the same request.
+__AddScoped__ = same instance of the service is used in all stages of the middleware pipeline for the same request.
 
-**AddSingleton** = one instance of the service is created for the entire lifetime of the application across all user requests.
+__AddSingleton__ = one instance of the service is created for the entire lifetime of the application across all user requests.
 
-**AddInstance** = similar to AddSingleton but we need to new up the instance of this service explicitly.
+__AddInstance__ = similar to AddSingleton but we need to new up the instance of this service explicitly.
+
+---
 
 ### Some Facts
 
@@ -54,3 +62,5 @@ Actually, the `.nupkg` files are just `.zip` files. If you rename the extension,
           ...
   }
 ```
+
+---

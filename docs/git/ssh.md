@@ -21,8 +21,8 @@ SSH keys are stored locally in `%USERPROFILE%/.ssh` directory. If it does not ex
 
 * Open your command prompt and type `puttygen`. This will open the generator screen.
 * Click `Generate` to generate a new key and move your mouse across the white area.
-* Type in the passphrase (__remember it wel!__) and save the private key to `%USERPROFILE%\.ssh` directory as `id_rsa.ppk`.
-    ![puttygen](../img/ssh_new.png)
+* Type in the passphrase (__remember it wel!__) and save the private key to `%USERPROFILE%\.ssh` directory as `id_rsa.ppk`.  
+![puttygen](../img/ssh_new.png)
 * Also, save the __OpenSSH__ version of the key as `id_rsa` file via the top menu `Conversions` -> `Export OpenSSH key`.
 
 #### Add a new SSH key via SSH-KEYGEN

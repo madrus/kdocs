@@ -2,6 +2,8 @@
 
 [TOC]
 
+---
+
 ### Powerline Fonts
 
 Taken from the [Powerline fonts](https://github.com/powerline/fonts) repository. Start by cloning:
@@ -35,19 +37,21 @@ or just for the current user:
 pip install --user powerline-status
 ```
 
+---
+
 ### Cmder
 
-**Main Font**
+#### Main Font
 
 I like these fonts for the terminal:
 
-*   Roboto Mono for Powerline
-*   Droid Sans Mono Slashed for Powerline
-*   Anonymice Powerline
+* Roboto Mono for Powerline
+* Droid Sans Mono Slashed for Powerline
+* Anonymice Powerline
 
-**Color Scheme**
+#### Color Scheme
 
-I like **Murena Scheme** with some tweaks in **Features/Colors**:
+I like __Murena Scheme__ with some tweaks in __Features/Colors__:
 
 | Position | Color Code  | Role                    |
 | :------: | :---------: | ----------------------- |
@@ -56,3 +60,5 @@ I like **Murena Scheme** with some tweaks in **Features/Colors**:
 | 1/4      | 0 65 100    | path background color   |
 | 2        | 60 154 6    | clean branch - green    |
 | 6/3      | 196 160 0   | dirty branch - yellow   |
+
+---
