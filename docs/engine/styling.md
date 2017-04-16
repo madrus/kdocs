@@ -166,6 +166,14 @@ line 2
     If you are looking for third party themes, they are listed in the MkDocs
     [community wiki](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes).
 
+Here are some themes I have already considered:
+
+* [MkDocs Themes](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
+* 12 [Bootswatch](http://mkdocs.github.io/mkdocs-bootswatch/) themes
+* [Cinder](http://sourcefoundry.org/cinder/) theme
+* [Alabaster](https://github.com/iamale/mkdocs-alabaster) theme (quite simple)
+* [Bootstrap](https://github.com/mkdocs/mkdocs-bootstrap) theme
+
 It is possible to add extra customization via a __Custom Theme__ option.
 
 * create the `custom_theme` and `custom_theme/css` directories under `doc_dir` (see `mkdocs.yml` file)

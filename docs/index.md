@@ -15,10 +15,8 @@ Collecting tips and tricks is huge fun. I am doing it "along the way" every time
 In order to view the documents offline, you need Python and the following dependencies:
 
 ```bash
-pip install mkdocs pygments pymdown-extensions
-pip install mkdocs-bootstrap mkdocs-bootswatch
-pip install mkdocs-alabaster mkdocs-cinder
-pip install fontawesome-markdown
+pip install -U mkdocs pygments pymdown-extensions
+pip install -U fontawesome-markdown
 ```
 
 ---
