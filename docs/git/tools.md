@@ -21,6 +21,8 @@ cmd /k ver & GitShowBranch /i
 
     If you changed the command line in the settings, you have to completely recreate the console window. Otherwise, you will not see the changes.
 
+---
+
 #### Add ConEmu to the Windows context menu
 
 It is convenient to be able to open the __ConEmu__ console at the current location. You would then want to be able to either
@@ -83,22 +85,39 @@ Add the path to `Cmder.exe` to the `PATH` variable:
 
 In the Windows explorer window right click in or on a directory to see `Cmder Here` in the context menu.
 
-#### Tips and Tricks
+#### Configuring Tasks
+
+Here is a good example of how to configure the environment for editing files not related to Visual Studio and .NET. Another neat functionality are customized Tasks. Use those to store different project workspaces. One task equals one workspace. Thanks to that it is possible to easily start another 'project' and initialize it by opening specific folders and specific files in Vim. It is a lot faster than doing everything manually.
+
+In the Settings navigate to __Startup -> Tasks__ and create a new predefined task with a "+" sign. Then add this code:
+
+```bash
+-new_console:d:C:\Users\mfranc\Dropbox "%ProgramFiles(x86)%\Vim\vim80\vim.exe" /k
+-new_console:d:D:\ "%ProgramFiles%\Vim\vim74\vim.exe" /k -cur_console:n
+-cur_console:d:D:\ "%ProgramFiles%\Git\bin\sh.exe" --login -i -cur_console:n:sT25V
+-cur_console:d:D:\ "%ProgramFiles%\Git\bin\sh.exe" --login -i cur_console:n:sT66H cmd.exe -new_console:d:D:\ -i -cur_console:n:sT50H
+```
+
+What does those commands do? 
+
+1. Creates new screen and opens Vim in my Dropbox folder context
+2. Creates new screen with Vim pointing to D:\
+3. Initializes shell in this new window and splits current screen into `75%/25% horizontaly`
+4. Initializes shell in new (25%) window and splits it up into `33.3%/66.6% vertically`. Then initializes shell in the new (66.6%) window and splits it up into `50%/50% vertically`.
 
 #### Aliases
 
 You can create an alias to any command by an `alias` command, e.g.:
 
 ```bash
-alias gpom=git push -u origin master
-alias gp=git push -u $*
+alias push=git push -u $*
 ```
 
 !!! warning "No space in between!"
 
     Make sure there is no space between the alias and the equality sign `=`
 
-Undo the alias by `unalias gpom`.
+Undo the alias by `unalias push`.
 
 The aliases can be found in `config` subdirectory of the cmder install directory in the `user-aliases.cmd` file or by running `alias` command with no parameters.
 
@@ -106,6 +125,10 @@ The aliases can be found in `config` subdirectory of the cmder install directory
 
 * `cmderr` - open cmder window in the cmder install directory, e.g. `C:\Program Files\Cmder`
 * `history` - show latest commands
+
+#### How to update ConEmu within Cmder
+
+__Maximus5__, the author of Cmder, explains how to update ConEmu to a new version. Current Cmder can contain an older ConEmu version. To update ConEmu, get the new package from the [ConEmu website](https://conemu.github.io) and copy its content to 'your cmder installation'/vendor/conemu-maximus5 folder.
 
 #### Links
 
@@ -144,3 +167,4 @@ Subkey: __command__
 
     In the `shell`, replace X with __1__ and in the `Background/shell` with __2__.
 
+---
