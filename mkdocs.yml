@@ -1,8 +1,8 @@
 # Project information
-site_name: "Madrus's Docs"
+site_name: 'Madrus's Docs'
 site_description: 'A short description of my project'
 site_author: Madrus
-site_url: 'https://madrus.github.io/kdocs'
+site_url: 'http://madrus4u.com/kdocs/'
 site_favicon: 'img/favicon.ico'
 
 # Repository
@@ -26,11 +26,13 @@ pages:
     - Tools: git/tools.md
     - Styling: git/styling.md
     - SSH: git/ssh.md
+  - Vue.js: 
+    - Basics: vuejs/basics.md
+  - Mac:
+    - NGINX: mac/nginx.md
   - Umbraco:
     - Technicalities: umbraco/technicalities.md
     - FAQ: umbraco/faq.md
-  - Vue.js: 
-    - Basics: vuejs/basics.md
   - Playground:
     - TODOs: playground/todo.md
     - Test Document: playground/test.md
