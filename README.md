@@ -4,6 +4,8 @@ In this documentation, I am collecting tips and tricks that at some point proved
 
 The website can be seen at http://madrus4u.com/kdocs/.
 
+---
+
 ### Basic Installation
 
 * `sudo pip install mkdocs`
@@ -12,16 +14,18 @@ The website can be seen at http://madrus4u.com/kdocs/.
 * `cd kdocs`
 * `curl 'https://jaspervdj.be/lorem-markdownum/markdown.txt' > docs/about.md` -- Add a new dummy page
 
+---
+
 ### Installing prerequisites
 
-In order to view the documents offline, you need **Python** and the following dependencies:
+In order to view the documents offline, you need __Python__ and the following dependencies:
 
 ```bash
 sudo pip install mkdocs pygments pymdown-extensions
 sudo pip install mkdocs-bootstrap mkdocs-bootswatch
 sudo pip install mkdocs-alabaster mkdocs-cinder
 sudo pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
-```mat
+```
 
 ### Running the project in DEV
 
@@ -30,6 +34,8 @@ Open the command prompt in the project root directory and type:
 ```bash
 mkdocs serve
 ```
+
+---
 
 ### Styling
 
@@ -45,11 +51,15 @@ theme: readthedocs
 
 You will notice that the website will look like __FeinCMS__ [documentation][feincms].
 
+---
+
 ### Building the site
 
 * `mkdocs build` -- build the site
 * `printf "site/" >> .gitignore`
 * `mkdocs build --clean` -- build and clean stale files
+
+---
 
 ### Material theme
 
@@ -61,15 +71,21 @@ You will notice that the website will look like __FeinCMS__ [documentation][fein
 
 See for more details the [Material for MkDocs][material] page. Also a full example configuration for a [mkdocs.yml][full-config].
 
+---
+
 ### Other useful commands
 
 * `mkdocs --help`
 * `mkdocs build --help`
 
+---
+
 ### Deploying to GitHub pages
 
 * `git push -u origin master`
 * `mkdocs gh-deploy` -- this will build the docs and use [ghp-import][ghp] tool to commit them to the gh-pages branch and push the gh-pages branch to GitHub. Use `mkdocs gh-deploy --help` to get a full list of options available for the `gh-deploy` command.
+
+---
 
 ### Read the Docs
 

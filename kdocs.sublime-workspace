@@ -16,27 +16,10 @@
 			}
 		},
 		{
-			"file": "site/js/theme.js",
-			"settings":
-			{
-				"buffer_size": 1748,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "requirements.txt",
-			"settings":
-			{
-				"buffer_size": 149,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 3379,
+				"buffer_size": 3563,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -49,13 +32,21 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 354.0,
+		"height": 392.0,
 		"last_filter": "insta",
 		"selected_items":
 		[
 			[
 				"insta",
 				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
 			],
 			[
 				"rem",
@@ -71,10 +62,6 @@
 			],
 			[
 				"inst",
-				"Package Control: Install Package"
-			],
-			[
-				"instal",
 				"Package Control: Install Package"
 			],
 			[
@@ -106,7 +93,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 542.0
+		"width": 560.0
 	},
 	"console":
 	{
@@ -126,20 +113,15 @@
 	},
 	"expanded_folders":
 	[
-		"/J/blogs/kdocs",
-		"/J/blogs/kdocs/custom_theme/css",
-		"/J/blogs/kdocs/docs/dotnet",
-		"/J/blogs/kdocs/docs/mkdocs",
-		"/J/blogs/kdocs/docs/playground",
-		"/J/blogs/kdocs/site/dotnet"
+		"/J/blogs/kdocs"
 	],
 	"file_history":
 	[
+		"/J/blogs/kdocs/site/js/theme.js",
 		"/C/Users/Andre/AppData/Roaming/Sublime Text 3/Packages/User/File Icons.sublime-settings",
 		"/J/blogs/kdocs/site/index.html",
 		"/J/blogs/kdocs/site/search.html",
 		"/C/Users/Andre/AppData/Roaming/Sublime Text 3/Packages/User/less2css.sublime-settings",
-		"/J/blogs/kdocs/site/js/theme.js",
 		"/J/blogs/kdocs/README.md",
 		"/J/code/httpServer/terminal.glue",
 		"/J/code/httpServer/.gitignore",
@@ -180,7 +162,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -210,104 +192,36 @@
 						"translation.y": 2.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "site/js/theme.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1748,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1158,
-								1158
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "requirements.txt",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 149,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": "<",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								}
-							],
-							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 1,
 					"file": "README.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3379,
+						"buffer_size": 3563,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1538,
-								1538
+								1319,
+								1319
 							]
 						],
 						"settings":
 						{
+							"auto_complete": false,
 							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1078.0,
+						"translation.y": 638.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]

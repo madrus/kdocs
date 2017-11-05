@@ -1,5 +1,5 @@
 # Project information
-site_name: "Madrus's Docs"
+site_name: 'Madrus's Docs'
 site_description: 'A short description of my project'
 site_author: 'Madrus'
 site_url: 'https://madrus.github.io/kdocs'
@@ -11,9 +11,9 @@ repo_url: 'https://github.com/madrus/kdocs'
 # Pages structure
 pages:
   - Home: index.md
-  - MkDocs:
-    - Technicalities: mkdocs/technicalities.md
-    - Styling: mkdocs/styling.md
+  - MkDocs Engine:
+    - Technicalities: engine/technicalities.md
+    - Styling: engine/styling.md
   - Aurelia:
     - Technicalities: aurelia/technicalities.md
   - .NET Core:
@@ -21,12 +21,17 @@ pages:
     - Notes: dotnet/notes.md
     - Tips: dotnet/tips.md
   - Git:
+    - GitFlow: git/gitflow.md
+    - Tools: git/tools.md
     - Styling: git/styling.md
+    - SSH: git/ssh.md
+  - Vue.js: 
+    - Basics: vuejs/basics.md
+  - Mac:
+    - NGINX: mac/nginx.md
   - Umbraco:
     - Technicalities: umbraco/technicalities.md
     - FAQ: umbraco/faq.md
-  - Vue.js: 
-    - Basics: vuejs/basics.md
   - Playground:
     - TODOs: playground/todo.md
     - Test Document: playground/test.md
@@ -38,14 +43,12 @@ theme:
   custom_dir: custom_theme
 extra_css: 
   - css/extra.min.css
-extra_javascript: []
 
 # Options
 extra:
-  version: 0.1.0
-  logo: 'images/logo.png'
+  version: 0.2.0
+  logo: 'img/logo.png'
 
-# Extensions
 markdown_extensions:
   - admonition
   - codehilite(css_class=code):
@@ -58,7 +61,7 @@ markdown_extensions:
       permalink: '#'
 
 #Copyright
-copyright: Copyright &copy; 2016 <a href="https://madrus4u.com">Balans4U</a>
+copyright: Copyright &copy; 2017 <a href="https://madrus4u.com">Balans4U</a>
 
 # Google Analytics
 google_analytics:

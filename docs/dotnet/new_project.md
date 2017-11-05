@@ -2,6 +2,8 @@
 
 [TOC]
 
+---
+
 ### .NET Core Prerequisites
 
 Ideally, you have to have a number of components installed on your system (Windows | Linux | MacOS):
@@ -10,10 +12,12 @@ Ideally, you have to have a number of components installed on your system (Windo
 * .NET Core SDK
 * Node.js
 
+---
+
 ### Create a new minimal ASP.NET Core project
 
 !!! warning "IMPORTANT!"
-    When working with Visual Studio as IDE, make sure that - **AT ALL TIMES!** - you can run your application both from inside the Visual Studio by pressing `Ctrl + F5`, and from the command prompt by executing `dotnet run` command.
+    When working with Visual Studio as IDE, make sure that - __AT ALL TIMES!__ - you can run your application both from inside the Visual Studio by pressing `Ctrl + F5`, and from the command prompt by executing `dotnet run` command.
 
 #### Dotnet Command Line Version
 
@@ -29,21 +33,21 @@ Ideally, you have to have a number of components installed on your system (Windo
 
   `dotnet restore`
 
-* Run the project and see the **Hello World!** message:
+* Run the project and see the __Hello World!__ message:
 
   `dotnet run`
 
 #### Visual Studio 2015 Version
 
-Start Visual Studio. Click on `File | New | Project`. In the `Templates` choose `Visual C# | .NET Core` and then `ASP.NET Core Web Application (.NET Core)`. Browse to the root location for your new solution. Choose a nice name for it, e.g. **MyGreatApp**. Click the `OK` button. Choose now the empty ASP.NET Core template.
+Start Visual Studio. Click on `File | New | Project`. In the `Templates` choose `Visual C# | .NET Core` and then `ASP.NET Core Web Application (.NET Core)`. Browse to the root location for your new solution. Choose a nice name for it, e.g. __MyGreatApp__. Click the `OK` button. Choose now the empty ASP.NET Core template.
 
-The solution is created. Wait for the dependencies to be installed. Build and run the solution with `Ctrl + F5`. When the browser starts, you will see the **Hello World!** message.
+The solution is created. Wait for the dependencies to be installed. Build and run the solution with `Ctrl + F5`. When the browser starts, you will see the __Hello World!__ message.
 
 You can also start the command prompt in the `MyGreatApp/Src/MyGreatApp` folder. Run this command:
 
 `dotnet restore && dotnet run`
 
-Browse to the [localhost:5000](http://localhost:5000) and you will see the **Hello World!** message.
+Browse to the [localhost:5000](http://localhost:5000) and you will see the __Hello World!__ message.
 
 #### Dependencies
 
@@ -132,7 +136,7 @@ You can start with this configuration:
 
 #### Global.json
 
-When you install the .NET Core SDK on Windows, it shows up in `C:\Program Files\dotnet\sdk` folder. Using the **"sdk"** option, we can override the default version.
+When you install the .NET Core SDK on Windows, it shows up in `C:\Program Files\dotnet\sdk` folder. Using the __"sdk"__ option, we can override the default version.
 
 ```json
 {
@@ -145,12 +149,12 @@ When you install the .NET Core SDK on Windows, it shows up in `C:\Program Files\
 
 #### Bower.json
 
-If you need **Bootstrap 3** for the styling of your website, add this `bower.json` file in the project root.
+If you need __Bootstrap 3__ for the styling of your website, add this `bower.json` file in the project root.
 
 ```json
 {
-	"name": "asp.net",
-	"private": true,
+    "name": "asp.net",
+    "private": true,
     "dependencies": {
       "bootstrap": "3.3.*"
     }
@@ -213,7 +217,9 @@ namespace NNMeta
 }
 ```
 
-#### **Controllers/HomeController.cs**
+---
+
+#### Controllers/HomeController.cs
 
 ```csharp
 using System.Collections.Generic;
@@ -233,7 +239,7 @@ namespace NNMeta.Controllers
 }
 ```
 
-#### **Views/_ViewImports.cshtml**
+#### Views/_ViewImports.cshtml
 
 ```html
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
@@ -269,3 +275,5 @@ namespace NNMeta.Controllers
 </body>
 </html>
 ```
+
+---
