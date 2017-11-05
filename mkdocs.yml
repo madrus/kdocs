@@ -3,7 +3,6 @@ site_name: "Madrus's Docs"
 site_description: 'A short description of my project'
 site_author: 'Madrus'
 site_url: 'https://madrus.github.io/kdocs'
-site_favicon: 'images/favicon.ico'
 
 # Repository
 #repo_name: 'GitHub'  # will it work with GitLab?
@@ -33,9 +32,10 @@ pages:
     - Test Document: playground/test.md
 
 # Documentation and theme
-docs_dir: 'docs'
-theme: readthedocs
-theme_dir: custom_theme
+theme: 
+  name: readthedocs
+  favicon: 'images/favicon.ico'
+  custom_dir: custom_theme
 extra_css: 
   - css/extra.min.css
 extra_javascript: []
