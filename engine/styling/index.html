@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Madrus">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Styling - Madrus's Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../css/extra.min.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Styling";
+    var mkdocs_page_input_path = "engine/styling.md";
+    var mkdocs_page_url = "/engine/styling/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-XXXXXXXX-X', 'auto');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Madrus's Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">MkDocs Engine</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../technicalities/">Technicalities</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Styling</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#custom-styling">Custom Styling</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#admonition-extension">Admonition extension</a></li>
+        
+            <li><a class="toctree-l4" href="#smartypants-extension">SmartyPants extension</a></li>
+        
+            <li><a class="toctree-l4" href="#nl2br-extension">nl2br extension</a></li>
+        
+            <li><a class="toctree-l4" href="#custom-theme">Custom Theme</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Aurelia</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../aurelia/technicalities/">Technicalities</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">.NET Core</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../dotnet/new_project/">New Project</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dotnet/notes/">Notes</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dotnet/tips/">Tips</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Git</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../git/gitflow/">GitFlow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../git/tools/">Tools</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../git/styling/">Styling</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../git/ssh/">SSH</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Vue.js</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../vuejs/basics/">Basics</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Mac</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../mac/nginx/">NGINX</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Umbraco</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../umbraco/technicalities/">Technicalities</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../umbraco/faq/">FAQ</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Playground</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../playground/todo/">TODOs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../playground/test/">Test Document</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Madrus's Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>MkDocs Engine &raquo;</li>
+        
+      
+    
+    <li>Styling</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/madrus/kdocs/edit/master/docs/engine/styling.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="custom-styling">Custom Styling<a class="headerlink" href="#custom-styling" title="Permanent link">#</a></h1>
+<div class="toc">
+<ul>
+<li><a href="#custom-styling">Custom Styling</a><ul>
+<li><a href="#admonition-extension">Admonition extension</a><ul>
+<li><a href="#syntax">Syntax</a></li>
+<li><a href="#special-words">Special words</a></li>
+<li><a href="#some-examples">Some examples</a></li>
+</ul>
+</li>
+<li><a href="#smartypants-extension">SmartyPants extension</a></li>
+<li><a href="#nl2br-extension">nl2br extension</a></li>
+<li><a href="#custom-theme">Custom Theme</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr />
+<h3 id="admonition-extension">Admonition extension<a class="headerlink" href="#admonition-extension" title="Permanent link">#</a></h3>
+<p><a href="https://pythonhosted.org/Markdown/extensions/admonition.html">Admonition extension</a> for the MkDocs Markdown provides for a way to draw attention of the reader. In order to use this extension</p>
+<h4 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">#</a></h4>
+<div class="code"><pre><span></span>!!! special_word &quot;some text within double quotes&quot;
+    Any number of lines aligned with the special_word
+</pre></div>
+
+
+<ol>
+<li>3 exclamation marks ( <strong>!!!</strong> ) at the beginning of the line</li>
+<li>1 space</li>
+<li>1 special word (see below)</li>
+<li>1 space</li>
+<li>(optional) some text within double quotes</li>
+<li>(optional) 1 empty line</li>
+<li>(optional) any number of lines beginning at pos. 4 (aligned with the special word after the exclamation marks)</li>
+</ol>
+<h4 id="special-words">Special words<a class="headerlink" href="#special-words" title="Permanent link">#</a></h4>
+<p>These special words result in a colored adminition blocks. It is nice to experiment with them.</p>
+<ul>
+<li><code>note</code>, <code>seealso</code> - light blue</li>
+<li><code>important</code>, <code>hint</code>, <code>tip</code> - green</li>
+<li><code>warning</code>, <code>caution</code>, <code>attention</code> - beige/brown</li>
+<li><code>danger</code>, <code>error</code> - pink/red</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The special word can be also any other word. In that case, the color will always be light blue.</p>
+</div>
+<h4 id="some-examples">Some examples<a class="headerlink" href="#some-examples" title="Permanent link">#</a></h4>
+<p>A custom text message on the first line&hellip;</p>
+<div class="code"><pre><span></span>!!! note &quot;Explicit title within double quotes&quot;
+
+    Any number of other indented markdown elements.
+    And this is the second paragraph.
+</pre></div>
+
+
+<p>&hellip;replaces the 1st word:</p>
+<div class="admonition note">
+<p class="admonition-title">Explicit title within double quotes</p>
+<p>Any number of other indented markdown elements.<br />
+And this is the second paragraph.</p>
+</div>
+<p>Any single word on the first line&hellip;</p>
+<div class="code"><pre><span></span>!!! hint
+
+    You should note that the title will be automatically capitalized.
+</pre></div>
+
+
+<p>&hellip;will be capitalized:</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>You should note that the title will be automatically capitalized.</p>
+</div>
+<p>The empty custom title&hellip;</p>
+<div class="code"><pre><span></span>!!! warning &quot;&quot;
+
+    This is an admonition box without a title.
+</pre></div>
+
+
+<p>&hellip;results in no title:</p>
+<div class="admonition warning">
+<p>This is an admonition box without a title.</p>
+</div>
+<p>The word &ldquo;warning&rdquo; plus custom title&hellip;</p>
+<div class="code"><pre><span></span>!!! danger &quot;Don&#39;t try this at home&quot;
+
+    Or you will regret it for the rest of your life!
+</pre></div>
+
+
+<p>&hellip;results in the red background:</p>
+<div class="admonition danger">
+<p class="admonition-title">Don&rsquo;t try this at home</p>
+<p>Or you will regret it for the rest of your life!</p>
+</div>
+<h3 id="smartypants-extension">SmartyPants extension<a class="headerlink" href="#smartypants-extension" title="Permanent link">#</a></h3>
+<p>Adding</p>
+<div class="code"><pre><span></span><span class="o">-</span> <span class="ss">smarty</span><span class="p">:</span>
+    <span class="ss">smart_angled_quotes</span><span class="p">:</span> <span class="kp">true</span>
+</pre></div>
+
+
+<p>to <code>markdown_extentions</code> gives you the possibility to print out nicely looking ASCII dashes, quotes and ellipes:</p>
+<p>You write:</p>
+<div class="code"><pre><span></span>&#39;single quotes&#39;
+&quot;double qoutes&quot;
+&lt;&lt;angled quotes&gt;&gt;
+... ellipsis
+-- ndash
+--- mdash
+</pre></div>
+
+
+<p>You get:</p>
+<p>&lsquo;single quotes&rsquo;<br />
+&ldquo;double qoutes&rdquo;<br />
+&laquo;angled quotes&raquo;<br />
+&hellip; ellipsis<br />
+&ndash; ndash<br />
+&mdash; mdash</p>
+<hr />
+<h3 id="nl2br-extension">nl2br extension<a class="headerlink" href="#nl2br-extension" title="Permanent link">#</a></h3>
+<p>Adding</p>
+<div class="code"><pre><span></span><span class="o">-</span> <span class="n">nl2br</span>
+</pre></div>
+
+
+<p>to <code>markdown_extentions</code> creates a newline within fences when you make a newline in Markdown. You type:</p>
+<div class="code"><pre><span></span>line 1
+line 2
+</pre></div>
+
+
+<p>Without <code>nl2br</code> you see this:</p>
+<div class="code"><pre><span></span>line 1 line 2
+</pre></div>
+
+
+<p>With <code>nl2br</code> you see this:</p>
+<div class="code"><pre><span></span>line 1
+line 2
+</pre></div>
+
+
+<hr />
+<h3 id="custom-theme">Custom Theme<a class="headerlink" href="#custom-theme" title="Permanent link">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are looking for third party themes, they are listed in the MkDocs<br />
+<a href="https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes">community wiki</a>.</p>
+</div>
+<p>Here are some themes I have already considered:</p>
+<ul>
+<li><a href="https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes">MkDocs Themes</a></li>
+<li>12 <a href="http://mkdocs.github.io/mkdocs-bootswatch/">Bootswatch</a> themes</li>
+<li><a href="http://sourcefoundry.org/cinder/">Cinder</a> theme</li>
+<li><a href="https://github.com/iamale/mkdocs-alabaster">Alabaster</a> theme (quite simple)</li>
+<li><a href="https://github.com/mkdocs/mkdocs-bootstrap">Bootstrap</a> theme</li>
+</ul>
+<p>It is possible to add extra customization via a <strong>Custom Theme</strong> option.</p>
+<ul>
+<li>create the <code>custom_theme</code> and <code>custom_theme/css</code> directories under <code>doc_dir</code> (see <code>mkdocs.yml</code> file)</li>
+<li>inside the <code>custom_theme/css</code> directory create <code>extra.less</code> file with your styles</li>
+<li>use any LESS compiler to compile the <code>extra.less</code> file to the minified <code>extra.min.css</code> and its map <code>extra.min.css.map</code></li>
+<li>add the following lines to <code>mkdoc.yml</code> under the <code>doc_dir</code> variable:</li>
+</ul>
+<div class="code"><pre><span></span>  <span class="ss">theme_dir</span><span class="p">:</span> <span class="n">custom_theme</span>
+  <span class="ss">extra_css</span><span class="p">:</span> 
+  <span class="o">-</span> <span class="n">css</span><span class="o">/</span><span class="n">extra</span><span class="o">.</span><span class="n">min</span><span class="o">.</span><span class="n">css</span>
+</pre></div>
+
+
+<ul>
+<li>now when you build and serve the website, you should see the custom styling in action</li>
+</ul>
+<p>Similarly, it is possible to add extra JavaScript inside the <code>custom_theme/js</code> directory. You add the corresponding setting to the <code>mkdocs.yml</code> file:</p>
+<div class="code"><pre><span></span>  <span class="ss">extra_javascript</span><span class="p">:</span> 
+  <span class="o">-</span> <span class="n">js</span><span class="o">/</span><span class="n">your</span><span class="o">-</span><span class="n">js</span><span class="o">-</span><span class="n">file</span><span class="o">.</span><span class="n">min</span><span class="o">.</span><span class="n">js</span>
+</pre></div>
+
+
+<hr />
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../aurelia/technicalities/" class="btn btn-neutral float-right" title="Technicalities">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../technicalities/" class="btn btn-neutral" title="Technicalities"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2017 <a href="https://madrus4u.com">Balans4U</a></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/madrus/kdocs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../technicalities/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../aurelia/technicalities/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script>
+
+</body>
+</html>

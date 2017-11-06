@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Madrus">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>FAQ - Madrus's Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../css/extra.min.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "FAQ";
+    var mkdocs_page_input_path = "umbraco/faq.md";
+    var mkdocs_page_url = "/umbraco/faq/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-XXXXXXXX-X', 'auto');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Madrus's Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">MkDocs Engine</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../engine/technicalities/">Technicalities</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../engine/styling/">Styling</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Aurelia</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../aurelia/technicalities/">Technicalities</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">.NET Core</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../dotnet/new_project/">New Project</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dotnet/notes/">Notes</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dotnet/tips/">Tips</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Git</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../git/gitflow/">GitFlow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../git/tools/">Tools</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../git/styling/">Styling</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../git/ssh/">SSH</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Vue.js</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../vuejs/basics/">Basics</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Mac</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../mac/nginx/">NGINX</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Umbraco</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../technicalities/">Technicalities</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">FAQ</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#issues-and-solutions">Issues and solutions</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#bundling-and-minifying">Bundling and minifying</a></li>
+        
+            <li><a class="toctree-l4" href="#web-deployment-could-not-find-part-of-the-path">Web Deployment - Could not find part of the path</a></li>
+        
+            <li><a class="toctree-l4" href="#web-deployment-group-policy-prevents-roslyns-cscexe-from-running">Web Deployment - Group policy prevents Roslyn's csc.exe from running</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Playground</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../playground/todo/">TODOs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../playground/test/">Test Document</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Madrus's Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Umbraco &raquo;</li>
+        
+      
+    
+    <li>FAQ</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/madrus/kdocs/edit/master/docs/umbraco/faq.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="issues-and-solutions">Issues and solutions<a class="headerlink" href="#issues-and-solutions" title="Permanent link">#</a></h1>
+<div class="toc">
+<ul>
+<li><a href="#issues-and-solutions">Issues and solutions</a><ul>
+<li><a href="#bundling-and-minifying">Bundling and minifying</a></li>
+<li><a href="#web-deployment-could-not-find-part-of-the-path">Web Deployment - Could not find part of the path</a><ul>
+<li><a href="#question">Question</a></li>
+<li><a href="#answer">Answer</a></li>
+</ul>
+</li>
+<li><a href="#web-deployment-group-policy-prevents-roslyns-cscexe-from-running">Web Deployment - Group policy prevents Roslyn&rsquo;s csc.exe from running</a><ul>
+<li><a href="#question_1">Question</a></li>
+<li><a href="#answer_1">Answer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<hr />
+<h3 id="bundling-and-minifying">Bundling and minifying<a class="headerlink" href="#bundling-and-minifying" title="Permanent link">#</a></h3>
+<p>Most of the information comes from two articles: <a href="https://our.umbraco.org/forum/developers/razor/72069-how-to-bundle-css-and-js">How to bundle CSS and JS</a> and <a href="https://gist.github.com/jkarsrud/5143239">Bundling and minification in Umbraco</a>.</p>
+<ul>
+<li>Added <code>App_Start</code> folder</li>
+<li>Created <code>BundleConfig.cs</code> class with bundles for JavaScript and CSS files</li>
+<li>Added <code>BundleTable.EnableOptimizations = true;</code> in <code>BundleConfig.cs</code> to be able to test bundling and minification.</li>
+<li>At the same time, added <code>&lt;compilation debug="true" /&gt;</code> in <code>&lt;system.web&gt;</code> section of <code>Web.config</code>, <code>&lt;compilation debug="false" /&gt;</code> in <code>web.Release.config</code>.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p><code>EnableOptimizations</code> takes precedence of <code>compilation debug</code> value.</p>
+</div>
+<ul>
+<li>It is also important to make sure that <code>bundles</code> are included in the <code>umbracoReservedPaths</code>:</li>
+</ul>
+<div class="code"><pre><span></span>  <span class="nt">&lt;appSettings&gt;</span>
+    ...
+    <span class="nt">&lt;add</span> <span class="na">key=</span><span class="s">&quot;umbracoReservedPaths&quot;</span> <span class="na">value=</span><span class="s">&quot;~/umbraco,~/install/,~/bundles/&quot;</span> <span class="nt">/&gt;</span>
+    ...
+  <span class="nt">&lt;/appSettings&gt;</span>
+</pre></div>
+
+
+<hr />
+<h3 id="web-deployment-could-not-find-part-of-the-path">Web Deployment - Could not find part of the path<a class="headerlink" href="#web-deployment-could-not-find-part-of-the-path" title="Permanent link">#</a></h3>
+<h4 id="question">Question<a class="headerlink" href="#question" title="Permanent link">#</a></h4>
+<p>Error during web deploy</p>
+<blockquote>
+<p>Could not open Source file: Could not find a part of the path &lsquo;J:\U\Ed4u\Ed4u\App_Plugins\LeBlender\Web.config;\App_Plugins\LeBlender\Web.config&rsquo;.</p>
+</blockquote>
+<h4 id="answer">Answer<a class="headerlink" href="#answer" title="Permanent link">#</a></h4>
+<p>Find the deployment profile <code>energydiet4u.nl - Web Deploy.pubxml</code></p>
+<p><img alt="energydiet4u.nl - Web Deploy.pubxml" src="../../img/webdeploy.PNG" /></p>
+<p>and add the following key to the <code>PropertyGroup</code> section:</p>
+<div class="code"><pre><span></span><span class="nt">&lt;AutoParameterizationWebConfigConnectionStrings&gt;</span>False<span class="nt">&lt;/AutoParameterizationWebConfigConnectionStrings&gt;</span>
+</pre></div>
+
+
+<hr />
+<h3 id="web-deployment-group-policy-prevents-roslyns-cscexe-from-running">Web Deployment - Group policy prevents Roslyn&rsquo;s csc.exe from running<a class="headerlink" href="#web-deployment-group-policy-prevents-roslyns-cscexe-from-running" title="Permanent link">#</a></h3>
+<h4 id="question_1">Question<a class="headerlink" href="#question_1" title="Permanent link">#</a></h4>
+<p>Website runtime error after deployment to GoDaddy:</p>
+<p><img alt="CodeDOM error" src="../../img/roslyn_csc_error.PNG" /></p>
+<h4 id="answer_1">Answer<a class="headerlink" href="#answer_1" title="Permanent link">#</a></h4>
+<p>Since the .NET 4.5 version, Roslyn compilation is the default way of compiling. This means if you create any web application either Web Forms or MVC using .NET 4.5 you get this Roslyn csc.exe compilation pre-installed in your project.</p>
+<ul>
+<li>Uninstall <code>Microsoft.CodeDOM.Providers.DotNetCompilerPlatform</code> NuGet package, rebuild and redeploy the website</li>
+<li>Delete the corresponding .dll&rsquo;s from the <code>bin</code> directory</li>
+</ul>
+<p><strong>NOTE</strong> This will be probably necessary to do every time <strong>Umbraco</strong> is upgraded.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../playground/todo/" class="btn btn-neutral float-right" title="TODOs">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../technicalities/" class="btn btn-neutral" title="Technicalities"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2017 <a href="https://madrus4u.com">Balans4U</a></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/madrus/kdocs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../technicalities/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../playground/todo/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Madrus">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Tools - Madrus's Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../css/extra.min.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Tools";
+    var mkdocs_page_input_path = "git/tools.md";
+    var mkdocs_page_url = "/git/tools/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-XXXXXXXX-X', 'auto');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Madrus's Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">MkDocs Engine</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../engine/technicalities/">Technicalities</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../engine/styling/">Styling</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Aurelia</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../aurelia/technicalities/">Technicalities</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">.NET Core</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../dotnet/new_project/">New Project</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dotnet/notes/">Notes</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dotnet/tips/">Tips</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Git</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../gitflow/">GitFlow</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Tools</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#git-command-line-tools">Git Command Line Tools</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#conemu">ConEmu</a></li>
+        
+            <li><a class="toctree-l4" href="#cmder">Cmder</a></li>
+        
+            <li><a class="toctree-l4" href="#far-manager">Far Manager</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../styling/">Styling</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../ssh/">SSH</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Vue.js</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../vuejs/basics/">Basics</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Mac</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../mac/nginx/">NGINX</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Umbraco</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../umbraco/technicalities/">Technicalities</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../umbraco/faq/">FAQ</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Playground</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../playground/todo/">TODOs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../playground/test/">Test Document</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Madrus's Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Git &raquo;</li>
+        
+      
+    
+    <li>Tools</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/madrus/kdocs/edit/master/docs/git/tools.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="git-command-line-tools">Git Command Line Tools<a class="headerlink" href="#git-command-line-tools" title="Permanent link">#</a></h1>
+<div class="toc">
+<ul>
+<li><a href="#git-command-line-tools">Git Command Line Tools</a><ul>
+<li><a href="#conemu">ConEmu</a><ul>
+<li><a href="#show-branch-name-on-command-line">Show Branch Name on Command Line</a></li>
+<li><a href="#add-conemu-to-the-windows-context-menu">Add ConEmu to the Windows context menu</a></li>
+</ul>
+</li>
+<li><a href="#cmder">Cmder</a><ul>
+<li><a href="#environment-variables">Environment variables</a></li>
+<li><a href="#shortcut-to-open-cmder-in-a-chosen-folder">Shortcut to open Cmder in a chosen folder</a></li>
+<li><a href="#configuring-tasks">Configuring Tasks</a></li>
+<li><a href="#aliases">Aliases</a></li>
+<li><a href="#standard-aliases">Standard Aliases</a></li>
+<li><a href="#how-to-update-conemu-within-cmder">How to update ConEmu within Cmder</a></li>
+<li><a href="#links">Links</a></li>
+</ul>
+</li>
+<li><a href="#far-manager">Far Manager</a><ul>
+<li><a href="#add-far-manager-to-the-windows-context-menu">Add Far Manager to the Windows context menu</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<hr />
+<h3 id="conemu">ConEmu<a class="headerlink" href="#conemu" title="Permanent link">#</a></h3>
+<p>Here is the main link to <a href="https://conemu.github.io/">Conemu</a> website. </p>
+<h4 id="show-branch-name-on-command-line">Show Branch Name on Command Line<a class="headerlink" href="#show-branch-name-on-command-line" title="Permanent link">#</a></h4>
+<p>Run <code>GitShowBranch /i</code> to install showing branch, <code>GitShowBranch /u</code> to uninstall.</p>
+<p>Also, you may run your <code>cmd</code> as following (within Task contents or ConEmu&rsquo;s Command line)</p>
+<div class="code"><pre><span></span>cmd /k ver <span class="p">&amp;</span> GitShowBranch /i
+</pre></div>
+
+
+<div class="admonition warning">
+<p class="admonition-title">Don&rsquo;t forget to recreate the console window!</p>
+<p>If you changed the command line in the settings, you have to completely recreate the console window. Otherwise, you will not see the changes.</p>
+</div>
+<hr />
+<h4 id="add-conemu-to-the-windows-context-menu">Add ConEmu to the Windows context menu<a class="headerlink" href="#add-conemu-to-the-windows-context-menu" title="Permanent link">#</a></h4>
+<p>It is convenient to be able to open the <strong>ConEmu</strong> console at the current location. You would then want to be able to either</p>
+<ol>
+<li>right click either on the folder itself, or </li>
+<li>right click inside the white area within the folder open in the <strong>Windows Explorer</strong>.</li>
+</ol>
+<p>Create (if not already created by the <strong>ConEmu</strong> installation itself) the same group of keys and string values in the <strong>Windows Registry</strong> in the following two locations respectively:</p>
+<ol>
+<li><code>HCR/Directory/shell</code></li>
+<li><code>HCR/Directory/Background/shell</code></li>
+</ol>
+<p>Key: <strong>ConEmu Here</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>(Default)</code></td>
+<td align="left"><code>REG_SZ</code></td>
+<td align="left"><code>(value not set)</code></td>
+</tr>
+<tr>
+<td align="left"><code>Icon</code></td>
+<td align="left"><code>REG_SZ</code></td>
+<td align="left"><code>C:\Program Files\ConEmu\ConEmu64.exe,0</code></td>
+</tr>
+</tbody>
+</table>
+<p>Subkey: <strong>command</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>(Default)</code></td>
+<td align="left"><code>REG_SZ</code></td>
+<td align="left"><code>"C:\Program Files\ConEmu\ConEmu64.exe" -here -run {cmd}</code><br><code>-cur_console:n</code></td>
+</tr>
+</tbody>
+</table>
+<p>You can also create the <strong>Admin</strong> version of the same command with minimal changes:</p>
+<ul>
+<li>Key: <strong>ConEmu Here (Admin)</strong></li>
+<li>replace <strong>:n</strong> with <strong>:a</strong> at the end of the <strong>command</strong> <code>Data</code> value: <code>-cur_console:a</code></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">TODO</p>
+<p>It would also be nice to be able to open the <strong>ConEmu</strong> folder from within the <strong>Far Manager</strong> window.</p>
+</div>
+<hr />
+<h3 id="cmder">Cmder<a class="headerlink" href="#cmder" title="Permanent link">#</a></h3>
+<p>This tool combines most of the features of <a href="#conemu">Conemu</a> and <a href="https://mridgers.github.io/clink/">Clink</a>.</p>
+<h4 id="environment-variables">Environment variables<a class="headerlink" href="#environment-variables" title="Permanent link">#</a></h4>
+<div class="admonition warning">
+<p class="admonition-title">No spaces in the path names!</p>
+<p>Make sure there are no spaces in the path. If necessary, substitute those paths with their short versions. You can find them by running <code>dir /X</code> in their parent directory.</p>
+</div>
+<p>Add the following environment system variables to Windows according to your specific situation:</p>
+<p><code>CMDER_ROOT = C:\PROGRA~1\Cmder</code></p>
+<p>Add the path to <code>Cmder.exe</code> to the <code>PATH</code> variable:</p>
+<p><code>C:\PROGRA~1\Cmder</code></p>
+<h4 id="shortcut-to-open-cmder-in-a-chosen-folder">Shortcut to open Cmder in a chosen folder<a class="headerlink" href="#shortcut-to-open-cmder-in-a-chosen-folder" title="Permanent link">#</a></h4>
+<ol>
+<li>Open a terminal as an <strong>Administrator</strong></li>
+<li>Navigate to the directory in which you have placed <strong>Cmder</strong></li>
+<li>Execute <code>.\cmder.exe /REGISTER ALL</code>. If you get <em>&ldquo;Access Denied&rdquo;</em> ensure you are executing the command in an <strong>Administrator</strong> prompt</li>
+</ol>
+<p>In the Windows explorer window right click in or on a directory to see <code>Cmder Here</code> in the context menu.</p>
+<h4 id="configuring-tasks">Configuring Tasks<a class="headerlink" href="#configuring-tasks" title="Permanent link">#</a></h4>
+<p>Here is a good example of how to configure the environment for editing files not related to Visual Studio and .NET. Another neat functionality are customized Tasks. Use those to store different project workspaces. One task equals one workspace. Thanks to that it is possible to easily start another &lsquo;project&rsquo; and initialize it by opening specific folders and specific files in Vim. It is a lot faster than doing everything manually.</p>
+<p>In the Settings navigate to <strong>Startup -&gt; Tasks</strong> and create a new predefined task with a &ldquo;+&rdquo; sign. Then add this code:</p>
+<div class="code"><pre><span></span>-new_console:d:C:<span class="se">\U</span>sers<span class="se">\m</span>franc<span class="se">\D</span>ropbox <span class="s2">&quot;%ProgramFiles(x86)%\Vim\vim80\vim.exe&quot;</span> /k
+-new_console:d:D:<span class="se">\ </span><span class="s2">&quot;%ProgramFiles%\Vim\vim74\vim.exe&quot;</span> /k -cur_console:n
+-cur_console:d:D:<span class="se">\ </span><span class="s2">&quot;%ProgramFiles%\Git\bin\sh.exe&quot;</span> --login -i -cur_console:n:sT25V
+-cur_console:d:D:<span class="se">\ </span><span class="s2">&quot;%ProgramFiles%\Git\bin\sh.exe&quot;</span> --login -i cur_console:n:sT66H cmd.exe -new_console:d:D:<span class="se">\ </span>-i -cur_console:n:sT50H
+</pre></div>
+
+
+<p>What does those commands do? </p>
+<ol>
+<li>Creates new screen and opens Vim in my Dropbox folder context</li>
+<li>Creates new screen with Vim pointing to D:\</li>
+<li>Initializes shell in this new window and splits current screen into <code>75%/25% horizontaly</code></li>
+<li>Initializes shell in new (25%) window and splits it up into <code>33.3%/66.6% vertically</code>. Then initializes shell in the new (66.6%) window and splits it up into <code>50%/50% vertically</code>.</li>
+</ol>
+<h4 id="aliases">Aliases<a class="headerlink" href="#aliases" title="Permanent link">#</a></h4>
+<p>You can create an alias to any command by an <code>alias</code> command, e.g.:</p>
+<div class="code"><pre><span></span><span class="nb">alias</span> <span class="nv">push</span><span class="o">=</span>git push -u <span class="nv">$*</span>
+</pre></div>
+
+
+<div class="admonition warning">
+<p class="admonition-title">No space in between!</p>
+<p>Make sure there is no space between the alias and the equality sign <code>=</code></p>
+</div>
+<p>Undo the alias by <code>unalias push</code>.</p>
+<p>The aliases can be found in <code>config</code> subdirectory of the cmder install directory in the <code>user-aliases.cmd</code> file or by running <code>alias</code> command with no parameters.</p>
+<h4 id="standard-aliases">Standard Aliases<a class="headerlink" href="#standard-aliases" title="Permanent link">#</a></h4>
+<ul>
+<li><code>cmderr</code> - open cmder window in the cmder install directory, e.g. <code>C:\Program Files\Cmder</code></li>
+<li><code>history</code> - show latest commands</li>
+</ul>
+<h4 id="how-to-update-conemu-within-cmder">How to update ConEmu within Cmder<a class="headerlink" href="#how-to-update-conemu-within-cmder" title="Permanent link">#</a></h4>
+<p><strong>Maximus5</strong>, the author of Cmder, explains how to update ConEmu to a new version. Current Cmder can contain an older ConEmu version. To update ConEmu, get the new package from the <a href="https://conemu.github.io">ConEmu website</a> and copy its content to &lsquo;your cmder installation&rsquo;/vendor/conemu-maximus5 folder.</p>
+<h4 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=ncBPkuhpszY">Cmder: Super Command Line Tool Window</a></li>
+</ul>
+<hr />
+<h3 id="far-manager">Far Manager<a class="headerlink" href="#far-manager" title="Permanent link">#</a></h3>
+<h4 id="add-far-manager-to-the-windows-context-menu">Add Far Manager to the Windows context menu<a class="headerlink" href="#add-far-manager-to-the-windows-context-menu" title="Permanent link">#</a></h4>
+<p>It is convenient to be able to open the <strong>Far Manager</strong> at the current location. You would then want to be able to either</p>
+<ol>
+<li>right click either on the folder itself, or </li>
+<li>right click inside the white area within the folder open in the <strong>Windows Explorer</strong>.</li>
+</ol>
+<p>Create or rename (if already created by the <strong>Far Manager</strong> installation) the same group of keys and string values in the <strong>Windows Registry</strong> in the following two locations respectively:</p>
+<ol>
+<li><code>HCR/Directory/shell</code></li>
+<li><code>HCR/Directory/Background/shell</code></li>
+</ol>
+<p>Key: <strong>Far Here</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>(Default)</code></td>
+<td align="left"><code>REG_SZ</code></td>
+<td align="left"><code>(value not set)</code></td>
+</tr>
+<tr>
+<td align="left"><code>Icon</code></td>
+<td align="left"><code>REG_SZ</code></td>
+<td align="left"><code>C:\Program Files\Far Manager\Far.exe,0</code></td>
+</tr>
+</tbody>
+</table>
+<p>Subkey: <strong>command</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>(Default)</code></td>
+<td align="left"><code>REG_SZ</code></td>
+<td align="left"><code>"C:\Program Files\Far Manager\Far.exe"</code> <code>"%</code><strong>X</strong><code>" "%</code><strong>X</strong><code>"</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition danger">
+<p class="admonition-title">Replace X with a number!</p>
+<p>In the <code>shell</code>, replace X with <strong>1</strong> and in the <code>Background/shell</code> with <strong>2</strong>.</p>
+</div>
+<hr />
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../styling/" class="btn btn-neutral float-right" title="Styling">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../gitflow/" class="btn btn-neutral" title="GitFlow"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2017 <a href="https://madrus4u.com">Balans4U</a></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/madrus/kdocs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../gitflow/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../styling/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script>
+
+</body>
+</html>

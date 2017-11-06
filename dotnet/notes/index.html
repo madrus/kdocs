@@ -1,0 +1,1600 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Madrus">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Notes - Madrus's Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../css/extra.min.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Notes";
+    var mkdocs_page_input_path = "dotnet/notes.md";
+    var mkdocs_page_url = "/dotnet/notes/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-XXXXXXXX-X', 'auto');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Madrus's Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">MkDocs Engine</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../engine/technicalities/">Technicalities</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../engine/styling/">Styling</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Aurelia</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../aurelia/technicalities/">Technicalities</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">.NET Core</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../new_project/">New Project</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Notes</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#notes-on-aspnet-core">Notes on ASP.NET Core</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#conventions">Conventions</a></li>
+        
+            <li><a class="toctree-l4" href="#extension-methods">Extension methods</a></li>
+        
+            <li><a class="toctree-l4" href="#lambda-anonymous-functions">Lambda anonymous functions</a></li>
+        
+            <li><a class="toctree-l4" href="#asynchronous-methods">Asynchronous methods</a></li>
+        
+            <li><a class="toctree-l4" href="#getting-property-names-with-nameof">Getting property names with nameof</a></li>
+        
+            <li><a class="toctree-l4" href="#workflow-with-an-empty-project">Workflow with an empty project</a></li>
+        
+            <li><a class="toctree-l4" href="#the-json-configuration-files">The JSON Configuration Files</a></li>
+        
+            <li><a class="toctree-l4" href="#razor">Razor</a></li>
+        
+            <li><a class="toctree-l4" href="#visual-studio-tips-and-tricks">Visual Studio tips and tricks</a></li>
+        
+            <li><a class="toctree-l4" href="#browser-link-loader">Browser Link Loader</a></li>
+        
+            <li><a class="toctree-l4" href="#static-files">Static files</a></li>
+        
+            <li><a class="toctree-l4" href="#bundling-and-minifying">Bundling and minifying</a></li>
+        
+            <li><a class="toctree-l4" href="#unit-testing-with-xunit-framework">Unit Testing with xUnit Framework</a></li>
+        
+            <li><a class="toctree-l4" href="#mocking-with-moq">Mocking with MOQ</a></li>
+        
+            <li><a class="toctree-l4" href="#sportsstore">SportsStore</a></li>
+        
+            <li><a class="toctree-l4" href="#scaffolding">Scaffolding</a></li>
+        
+            <li><a class="toctree-l4" href="#setup-the-database">Setup the database</a></li>
+        
+            <li><a class="toctree-l4" href="#viewmodels-and-taghelpers">ViewModels and TagHelpers</a></li>
+        
+            <li><a class="toctree-l4" href="#installing-bootstrap-package">Installing Bootstrap package</a></li>
+        
+            <li><a class="toctree-l4" href="#improving-the-urls">Improving the URLs</a></li>
+        
+            <li><a class="toctree-l4" href="#enabling-sessions">Enabling Sessions</a></li>
+        
+            <li><a class="toctree-l4" href="#annotations">Annotations</a></li>
+        
+            <li><a class="toctree-l4" href="#resetting-the-database">Resetting the Database</a></li>
+        
+            <li><a class="toctree-l4" href="#using-tempdata">Using TempData</a></li>
+        
+            <li><a class="toctree-l4" href="#localization-hell">Localization hell</a></li>
+        
+            <li><a class="toctree-l4" href="#adding-identity">Adding Identity</a></li>
+        
+            <li><a class="toctree-l4" href="#adding-identity-migrations">Adding Identity migrations</a></li>
+        
+            <li><a class="toctree-l4" href="#adding-authorization">Adding Authorization</a></li>
+        
+            <li><a class="toctree-l4" href="#sources-used">Sources used</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../tips/">Tips</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Git</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../git/gitflow/">GitFlow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../git/tools/">Tools</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../git/styling/">Styling</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../git/ssh/">SSH</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Vue.js</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../vuejs/basics/">Basics</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Mac</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../mac/nginx/">NGINX</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Umbraco</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../umbraco/technicalities/">Technicalities</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../umbraco/faq/">FAQ</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Playground</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../playground/todo/">TODOs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../playground/test/">Test Document</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Madrus's Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>.NET Core &raquo;</li>
+        
+      
+    
+    <li>Notes</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/madrus/kdocs/edit/master/docs/dotnet/notes.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="notes-on-aspnet-core">Notes on ASP.NET Core<a class="headerlink" href="#notes-on-aspnet-core" title="Permanent link">#</a></h1>
+<div class="toc">
+<ul>
+<li><a href="#notes-on-aspnet-core">Notes on ASP.NET Core</a><ul>
+<li><a href="#conventions">Conventions</a></li>
+<li><a href="#extension-methods">Extension methods</a><ul>
+<li><a href="#class-extensions">Class extensions</a></li>
+<li><a href="#interface-extensions">Interface extensions</a></li>
+<li><a href="#filtering">Filtering</a></li>
+</ul>
+</li>
+<li><a href="#lambda-anonymous-functions">Lambda anonymous functions</a></li>
+<li><a href="#asynchronous-methods">Asynchronous methods</a></li>
+<li><a href="#getting-property-names-with-nameof">Getting property names with nameof</a></li>
+<li><a href="#workflow-with-an-empty-project">Workflow with an empty project</a></li>
+<li><a href="#the-json-configuration-files">The JSON Configuration Files</a></li>
+<li><a href="#razor">Razor</a><ul>
+<li><a href="#view-imports-file">View Imports File</a></li>
+<li><a href="#view-start-file">View Start File</a></li>
+<li><a href="#viewbag-property">ViewBag property</a></li>
+<li><a href="#attribute-values">Attribute values</a></li>
+<li><a href="#switch-statement">Switch statement</a></li>
+</ul>
+</li>
+<li><a href="#visual-studio-tips-and-tricks">Visual Studio tips and tricks</a><ul>
+<li><a href="#enable-developer-exception-page">Enable Developer Exception Page</a></li>
+</ul>
+</li>
+<li><a href="#browser-link-loader">Browser Link Loader</a></li>
+<li><a href="#static-files">Static files</a></li>
+<li><a href="#bundling-and-minifying">Bundling and minifying</a></li>
+<li><a href="#unit-testing-with-xunit-framework">Unit Testing with xUnit Framework</a><ul>
+<li><a href="#preparation">Preparation</a></li>
+<li><a href="#fact-and-theory">Fact and Theory</a></li>
+<li><a href="#getting-test-data-from-a-method-or-property">Getting Test Data from a Method or Property</a></li>
+</ul>
+</li>
+<li><a href="#mocking-with-moq">Mocking with MOQ</a></li>
+<li><a href="#sportsstore">SportsStore</a></li>
+<li><a href="#scaffolding">Scaffolding</a></li>
+<li><a href="#setup-the-database">Setup the database</a></li>
+<li><a href="#viewmodels-and-taghelpers">ViewModels and TagHelpers</a></li>
+<li><a href="#installing-bootstrap-package">Installing Bootstrap package</a></li>
+<li><a href="#improving-the-urls">Improving the URLs</a></li>
+<li><a href="#enabling-sessions">Enabling Sessions</a></li>
+<li><a href="#annotations">Annotations</a><ul>
+<li><a href="#adding-migrations">Adding migrations</a></li>
+</ul>
+</li>
+<li><a href="#resetting-the-database">Resetting the Database</a></li>
+<li><a href="#using-tempdata">Using TempData</a></li>
+<li><a href="#localization-hell">Localization hell</a></li>
+<li><a href="#adding-identity">Adding Identity</a></li>
+<li><a href="#adding-identity-migrations">Adding Identity migrations</a></li>
+<li><a href="#adding-authorization">Adding Authorization</a></li>
+<li><a href="#sources-used">Sources used</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr />
+<p>I have written these notes while working on a couple of great books on the subject. See <a href="#sources-used">Sources used</a>.</p>
+<p><code>Models</code> - the <code>M</code> in <code>MVC</code> - contain the data that users work with. There are two broad types of model:</p>
+<ul>
+<li><code>view models</code>, which represent just data passed from the controller to the view, and</li>
+<li><code>domain models</code>, which contain the data in a business domain, along with the operations, transformations, and rules for creating, storing, and manipulating that data, collectively referred to as the model logic.</li>
+</ul>
+<p>In ASP.NET Core MVC, <code>controllers</code> are C# classes, usually derived from the <code>Microsoft.AspNetCore.Mvc.Controller</code> class. Each <strong>public</strong> method in a class derived from <code>Controller</code> is an <code>action method</code>, which is associated with a <code>URL</code>.</p>
+<p><img alt="bla" src="../../img/interactions_in_mvc_applications.png" /></p>
+<hr />
+<h3 id="conventions">Conventions<a class="headerlink" href="#conventions" title="Permanent link">#</a></h3>
+<ul>
+<li>put the third-party JavaScript and CSS packages you rely on in the <code>wwwroot/lib</code> folder.</li>
+<li><strong>convention over configuration</strong></li>
+<li>the controller for <code>/product</code> uri should have the name <code>ProductController.cs</code> and reside in the <code>/Controllers</code> folder; from other parts in the project, such as when using an HTML helper method, you specify the first part of the name (<code>Product</code>), and MVC automatically appends <code>Controller</code> to the name and starts looking for the controller class.</li>
+<li>views for <code>/product</code> uri associated with <code>ProductController</code> should all reside in the <code>/Views/Product</code> folder.</li>
+<li>MVC expects that the <code>default view</code> for an <code>action method</code> should be named after that method. For example, the default view associated with an action method called <code>List</code> should be called <code>List.cshtml</code>. Thus, for the <code>List action method</code> in the <code>ProductController</code> class, the <code>default view</code> is expected to be <code>/Views/Product/List.cshtml</code>. The <code>default view</code> is used when you return the result of calling the <code>View</code> method in an action method, like this:</li>
+</ul>
+<div class="code"><pre><span></span>  <span class="k">return</span> <span class="nf">View</span><span class="p">();</span>
+</pre></div>
+
+
+<p>You can specify a different view by name, like this:</p>
+<div class="code"><pre><span></span>  <span class="k">return</span> <span class="nf">View</span><span class="p">(</span><span class="s">&quot;MyOtherView&quot;</span><span class="p">);</span>
+</pre></div>
+
+
+<ul>
+<li>When looking for a <code>view</code>, MVC looks in the folder named after the controller and then in the <code>/Views/Shared</code> folder. This means that I can put views that will be used by more than one controller in the <code>/Views/Shared</code> folder and MVC will find them.</li>
+<li>The naming convention for <code>layouts</code> is to prefix the file with an underscore (<code>_</code>) character, and layout files are placed in the <code>/Views/Shared</code> folder. This layout is applied to all views by default through the <code>/Views/_ViewStart.cshtml</code> file. If you do not want the default layout applied to views, you can change the settings in <code>ViewStart.cshtml</code> (or delete the file entirely) to specify another layout in the view, like this:</li>
+</ul>
+<div class="code"><pre><span></span>  <span class="err">@</span><span class="p">{</span>
+    <span class="n">Layout</span> <span class="p">=</span> <span class="s">&quot;~/_MyLayout.cshtml&quot;</span><span class="p">;</span>
+  <span class="p">}</span>
+</pre></div>
+
+
+<ul>
+<li>Or you can disable any layout for a given view, like this:</li>
+</ul>
+<div class="code"><pre><span></span>  <span class="err">@</span><span class="p">{</span>
+    <span class="n">Layout</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+  <span class="p">}</span>
+</pre></div>
+
+
+<hr />
+<h3 id="extension-methods">Extension methods<a class="headerlink" href="#extension-methods" title="Permanent link">#</a></h3>
+<h4 id="class-extensions">Class extensions<a class="headerlink" href="#class-extensions" title="Permanent link">#</a></h4>
+<p>Suppose we have a simple class:</p>
+<div class="code"><pre><span></span><span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">LanguageFeatures.Models</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">ShoppingCart</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">Product</span><span class="p">&gt;</span> <span class="n">Products</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>We want to extend its functionality with a new method to calculate the total amount:</p>
+<div class="code"><pre><span></span><span class="k">public</span> <span class="k">static</span> <span class="kt">decimal</span> <span class="nf">TotalPrices</span><span class="p">(</span><span class="k">this</span> <span class="n">ShoppingCart</span> <span class="n">cartParam</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">decimal</span> <span class="n">total</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+
+    <span class="k">foreach</span> <span class="p">(</span><span class="n">Product</span> <span class="n">prod</span> <span class="k">in</span> <span class="n">cartParam</span><span class="p">.</span><span class="n">Products</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">total</span> <span class="p">+=</span> <span class="n">prod</span><span class="p">?.</span><span class="n">Price</span> <span class="p">??</span> <span class="m">0</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">total</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>We can then use this extension method like this:</p>
+<div class="code"><pre><span></span><span class="n">ShoppingCart</span> <span class="n">cart</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ShoppingCart</span> <span class="p">{</span> <span class="n">Products</span> <span class="p">=</span> <span class="n">Product</span><span class="p">.</span><span class="n">GetProducts</span><span class="p">()</span> <span class="p">};</span>
+<span class="kt">decimal</span> <span class="n">cartTotal</span> <span class="p">=</span> <span class="n">cart</span><span class="p">.</span><span class="n">TotalPrices</span><span class="p">();</span>
+</pre></div>
+
+
+<h4 id="interface-extensions">Interface extensions<a class="headerlink" href="#interface-extensions" title="Permanent link">#</a></h4>
+<div class="code"><pre><span></span><span class="k">using</span> <span class="nn">System.Collections</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">LanguageFeatures.Models</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">ShoppingCart</span> <span class="p">:</span> <span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">Product</span><span class="p">&gt;</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">Product</span><span class="p">&gt;</span> <span class="n">Products</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+        <span class="k">public</span> <span class="n">IEnumerator</span><span class="p">&lt;</span><span class="n">Product</span><span class="p">&gt;</span> <span class="n">GetEnumerator</span><span class="p">()</span>
+        <span class="p">{</span>
+           <span class="k">return</span> <span class="n">Products</span><span class="p">.</span><span class="n">GetEnumerator</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="n">IEnumerator</span> <span class="n">IEnumerable</span><span class="p">.</span><span class="n">GetEnumerator</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="nf">GetEnumerator</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>We can rewrite our extension method like this:</p>
+<div class="code"><pre><span></span><span class="k">public</span> <span class="k">static</span> <span class="kt">decimal</span> <span class="nf">TotalPrices</span><span class="p">(</span><span class="k">this</span> <span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">Product</span><span class="p">&gt;</span> <span class="n">products</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">decimal</span> <span class="n">total</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+
+    <span class="k">foreach</span> <span class="p">(</span><span class="n">Product</span> <span class="n">prod</span> <span class="k">in</span> <span class="n">products</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">total</span> <span class="p">+=</span> <span class="n">prod</span><span class="p">?.</span><span class="n">Price</span> <span class="p">??</span> <span class="m">0</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">total</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>and use it with any object of type <code>IEnumerable&lt;Product&gt;</code> like <code>ShoppingCart</code> and <code>Product</code> array:</p>
+<div class="code"><pre><span></span><span class="n">ShoppingCart</span> <span class="n">cart</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ShoppingCart</span> <span class="p">{</span> <span class="n">Products</span> <span class="p">=</span> <span class="n">Product</span><span class="p">.</span><span class="n">GetProducts</span><span class="p">()</span> <span class="p">};</span>
+
+<span class="n">Product</span><span class="p">[]</span> <span class="n">productArray</span> <span class="p">=</span>
+<span class="p">{</span>
+    <span class="k">new</span> <span class="n">Product</span> <span class="p">{</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Kayak&quot;</span><span class="p">,</span> <span class="n">Price</span> <span class="p">=</span> <span class="m">275</span><span class="n">M</span><span class="p">},</span>
+    <span class="k">new</span> <span class="n">Product</span> <span class="p">{</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Lifejacket&quot;</span><span class="p">,</span> <span class="n">Price</span> <span class="p">=</span> <span class="m">48.95</span><span class="n">M</span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">decimal</span> <span class="n">cartTotal</span> <span class="p">=</span> <span class="n">cart</span><span class="p">.</span><span class="n">TotalPrices</span><span class="p">();</span>
+<span class="kt">decimal</span> <span class="n">arrayTotal</span> <span class="p">=</span> <span class="n">productArray</span><span class="p">.</span><span class="n">TotalPrices</span><span class="p">();</span>
+</pre></div>
+
+
+<h4 id="filtering">Filtering<a class="headerlink" href="#filtering" title="Permanent link">#</a></h4>
+<p>Extension methods can be used to <code>filter</code> collections of objects. An extension method that operates on an <code>IEnumerable&lt;T&gt;</code> and that also returns an <code>IEnumerable&lt;T&gt;</code> can use the <code>yield</code> keyword to apply selection criteria to items in the source data to produce a reduced set of results.</p>
+<div class="code"><pre><span></span><span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">LanguageFeatures.Models</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">class</span> <span class="nc">MyExtensionMethods</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">Product</span><span class="p">&gt;</span> <span class="n">FilterByPrice</span><span class="p">(</span>
+            <span class="k">this</span> <span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">Product</span><span class="p">&gt;</span> <span class="n">productEnum</span><span class="p">,</span>
+            <span class="kt">decimal</span> <span class="n">minimumPrice</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">foreach</span> <span class="p">(</span><span class="n">Product</span> <span class="n">prod</span> <span class="k">in</span> <span class="n">productEnum</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">((</span><span class="n">prod</span><span class="p">?.</span><span class="n">Price</span> <span class="p">??</span> <span class="m">0</span><span class="p">)</span> <span class="p">&gt;=</span> <span class="n">minimumPrice</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="k">yield</span> <span class="k">return</span> <span class="n">prod</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<hr />
+<h3 id="lambda-anonymous-functions">Lambda anonymous functions<a class="headerlink" href="#lambda-anonymous-functions" title="Permanent link">#</a></h3>
+<p>We can repeat this process indefinitely and create a different filter method for every property and every combination of properties that we are interested in. A more elegant approach is to separate out the code that processes the enumeration from the selection criteria. C# makes this easy by allowing functions to be passed around as objects. We can then create a single extension method that filters an enumeration of Product objects but that delegates the decision about which ones are included in the results to a separate function.</p>
+<div class="code"><pre><span></span><span class="k">public</span> <span class="k">static</span> <span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">Product</span><span class="p">&gt;</span> <span class="n">Filter</span><span class="p">(</span>
+    <span class="k">this</span> <span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">Product</span><span class="p">&gt;</span> <span class="n">productEnum</span><span class="p">,</span>
+    <span class="n">Func</span><span class="p">&lt;</span><span class="n">Product</span><span class="p">,</span> <span class="kt">bool</span><span class="p">&gt;</span> <span class="n">selector</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">foreach</span> <span class="p">(</span><span class="n">Product</span> <span class="n">prod</span> <span class="k">in</span> <span class="n">productEnum</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">selector</span><span class="p">(</span><span class="n">prod</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="k">yield</span> <span class="k">return</span> <span class="n">prod</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Now, we can use this <code>Filter</code> function as follows:</p>
+<div class="code"><pre><span></span><span class="kt">decimal</span> <span class="n">priceFilterTotal</span> <span class="p">=</span> <span class="n">productArray</span>
+    <span class="p">.</span><span class="n">Filter</span><span class="p">(</span><span class="n">p</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="n">p</span><span class="p">?.</span><span class="n">Price</span> <span class="p">??</span> <span class="m">0</span><span class="p">)</span> <span class="p">&gt;=</span> <span class="m">20</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">TotalPrices</span><span class="p">();</span>
+<span class="kt">decimal</span> <span class="n">nameFilterTotal</span> <span class="p">=</span> <span class="n">productArray</span>
+    <span class="p">.</span><span class="n">Filter</span><span class="p">(</span><span class="n">p</span> <span class="p">=&gt;</span> <span class="n">p</span><span class="p">?.</span><span class="n">Name</span><span class="p">?[</span><span class="m">0</span><span class="p">]</span> <span class="p">==</span> <span class="sc">&#39;S&#39;</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">TotalPrices</span><span class="p">();</span>
+</pre></div>
+
+
+<p><code>Lambdas</code> can also be used in class properties, e.g.:</p>
+<div class="code"><pre><span></span><span class="k">public</span> <span class="kt">bool</span> <span class="n">NameBeginsWithS</span> <span class="p">=&gt;</span> <span class="n">Name</span><span class="p">?[</span><span class="m">0</span><span class="p">]</span> <span class="p">==</span> <span class="sc">&#39;S&#39;</span><span class="p">;</span>
+</pre></div>
+
+
+<hr />
+<h3 id="asynchronous-methods">Asynchronous methods<a class="headerlink" href="#asynchronous-methods" title="Permanent link">#</a></h3>
+<p>Add <code>"System.Net.Http": "4.1.0"</code> dependency in <code>project.json</code>.</p>
+<p>Here is how we could make an asynchronous call &ldquo;the hard way&rdquo;:</p>
+<div class="code"><pre><span></span><span class="k">public</span> <span class="k">static</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">long?</span><span class="p">&gt;</span> <span class="n">GetPageLengthWithoutAsyncAwait</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">HttpClient</span> <span class="n">client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HttpClient</span><span class="p">();</span>
+    <span class="kt">var</span> <span class="n">httpTask</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">GetAsync</span><span class="p">(</span><span class="s">&quot;http://apress.com&quot;</span><span class="p">);</span>
+    <span class="c1">// we could do other things here while the HTTP request is performed</span>
+    <span class="k">return</span> <span class="n">httpTask</span><span class="p">.</span><span class="n">ContinueWith</span><span class="p">((</span><span class="n">Task</span><span class="p">&lt;</span><span class="n">HttpResponseMessage</span><span class="p">&gt;</span> <span class="n">antecedent</span><span class="p">)</span> <span class="p">=&gt;</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">antecedent</span><span class="p">.</span><span class="n">Result</span><span class="p">.</span><span class="n">Content</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="n">ContentLength</span><span class="p">;</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>And here is the clever way:</p>
+<div class="code"><pre><span></span><span class="k">public</span> <span class="k">static</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">long?</span><span class="p">&gt;</span> <span class="n">GetPageLength</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">HttpClient</span> <span class="n">client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HttpClient</span><span class="p">();</span>
+    <span class="kt">var</span> <span class="n">httpMessage</span> <span class="p">=</span> <span class="k">await</span> <span class="n">client</span><span class="p">.</span><span class="n">GetAsync</span><span class="p">(</span><span class="s">&quot;http://apress.com&quot;</span><span class="p">);</span>
+    <span class="c1">// we could do other things here while the HTTP request is performed</span>
+    <span class="k">return</span> <span class="n">httpMessage</span><span class="p">.</span><span class="n">Content</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="n">ContentLength</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>And we could use this in our controller:</p>
+<div class="code"><pre><span></span><span class="k">using</span> <span class="nn">LanguageFeatures.Models</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Mvc</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">LanguageFeatures.Controllers</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">HomeController</span> <span class="p">:</span> <span class="n">Controller</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">ViewResult</span><span class="p">&gt;</span> <span class="n">Index</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="kt">long?</span> <span class="n">length</span> <span class="p">=</span> <span class="k">await</span> <span class="n">MyAsyncMethods</span><span class="p">.</span><span class="n">GetPageLength</span><span class="p">();</span>
+            <span class="k">return</span> <span class="nf">View</span><span class="p">(</span><span class="k">new</span> <span class="kt">string</span><span class="p">[]</span> <span class="p">{</span> <span class="err">$</span><span class="s">&quot;Length: {length}&quot;</span> <span class="p">});</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<hr />
+<h3 id="getting-property-names-with-nameof">Getting property names with nameof<a class="headerlink" href="#getting-property-names-with-nameof" title="Permanent link">#</a></h3>
+<p>If we use lambdas the classic way:</p>
+<div class="code"><pre><span></span><span class="n">products</span><span class="p">.</span><span class="n">Select</span><span class="p">(</span><span class="n">p</span> <span class="p">=&gt;</span> <span class="err">$</span><span class="s">&quot;Name: {p.Name}, Price: {p.Price}&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>we of course get no intellisense on <code>Name:</code> and <code>Price:</code>. So, if we change the property name in the class and forget to change these strings here, we get a mismatch.</p>
+<p>Fortunately, we can now rewrite the same code like this:</p>
+<div class="code"><pre><span></span><span class="n">products</span><span class="p">.</span><span class="n">Select</span><span class="p">(</span><span class="n">p</span> <span class="p">=&gt;</span> <span class="err">$</span><span class="s">&quot;{nameof(p.Name)}: {p.Name}, {nameof(p.Price)}: {p.Price}&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>but then we will get intellisense and type safety.</p>
+<hr />
+<h3 id="workflow-with-an-empty-project">Workflow with an empty project<a class="headerlink" href="#workflow-with-an-empty-project" title="Permanent link">#</a></h3>
+<ul>
+<li>create a new empty ASP.NET Core project</li>
+<li>add <code>"Microsoft.AspNetCore.Mvc": "1.0.1"</code> dependency in <code>project.json</code></li>
+<li>add <code>"System.Net.Http": "4.1.0"</code> dependency in <code>project.json</code></li>
+<li>add <code>Mvc</code> to <code>Startup.cs</code>:</li>
+</ul>
+<div class="code"><pre><span></span><span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Builder</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Hosting</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.Extensions.DependencyInjection</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.Extensions.Logging</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">LanguageFeatures</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">Startup</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">ConfigureServices</span><span class="p">(</span><span class="n">IServiceCollection</span> <span class="n">services</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">services</span><span class="p">.</span><span class="n">AddMvc</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">Configure</span><span class="p">(</span><span class="n">IApplicationBuilder</span> <span class="n">app</span><span class="p">,</span> <span class="n">IHostingEnvironment</span> <span class="n">env</span><span class="p">,</span> <span class="n">ILoggerFactory</span> <span class="n">loggerFactory</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">app</span><span class="p">.</span><span class="n">UseMvcWithDefaultRoute</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<hr />
+<h3 id="the-json-configuration-files">The JSON Configuration Files<a class="headerlink" href="#the-json-configuration-files" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">global.json</td>
+<td align="left">This file, which is found in the Solution Items folder, is responsible for telling Visual Studio where to find the projects in the solution and which version of the .NET execution environment should be used to run the application.</td>
+</tr>
+<tr>
+<td align="left">launchSettings.json</td>
+<td align="left">This file, which is revealed by expanding the Properties item in the MVC application project, is used to specify how the application is started.</td>
+</tr>
+<tr>
+<td align="left">appsettings.json</td>
+<td align="left">This file is used to define application-specific settings.</td>
+</tr>
+<tr>
+<td align="left">bower.json</td>
+<td align="left">This file is used by Bower to list the client-side packages that are installed into the project.</td>
+</tr>
+<tr>
+<td align="left">bundleconfig.json</td>
+<td align="left">This file is used to bundle and minify JavaScript and CSS files.</td>
+</tr>
+<tr>
+<td align="left">project.json</td>
+<td align="left">This file is used to specify the NuGet packages that are installed into the application. This file is also used for other project settings.</td>
+</tr>
+<tr>
+<td align="left">project.lock.json</td>
+<td align="left">This file, which is revealed by expanding the project.json item in the Solution Explorer, contains detailed dependencies between packages installed in the project. It is generated automatically and should not be edited manually.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="razor">Razor<a class="headerlink" href="#razor" title="Permanent link">#</a></h3>
+<h4 id="view-imports-file">View Imports File<a class="headerlink" href="#view-imports-file" title="Permanent link">#</a></h4>
+<p>Use <code>_ViewImports.cshtml</code> file in the <code>Views</code> folder to specify the standard include namespaces. Then you can omit them in the individual views.</p>
+<h4 id="view-start-file">View Start File<a class="headerlink" href="#view-start-file" title="Permanent link">#</a></h4>
+<p>Normally, we have to specify the layout file we want in every view. Therefore, if we need to rename the layout file, we are going to have to find every view that refers to it and make a change, which will be an error-prone process and counter to the general theme of easy maintenance that runs through MVC development.</p>
+<p>We can resolve this by using a <code>view start file</code>. When it renders a view, MVC will look for a file called <code>_ViewStart.cshtml</code> and we can put it in the <code>Views</code> folder. The contents of this file will be treated as though they were contained in the view file itself, and we can use this feature to automatically set a value for the Layout property.</p>
+<div class="code"><pre><span></span><span class="err">@</span><span class="p">{</span>
+    <span class="n">Layout</span> <span class="p">=</span> <span class="s">&quot;_BasicLayout&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Now, in the views that should use this <code>_BasicLayout</code>, we can omit the layout line.</p>
+<p>We do not have to specify that we want to use the view start file. MVC will locate the file and use its contents automatically. The values defined in the view file take precedence, which makes it easy to override the view start file.</p>
+<p>We can also use <code>multiple view start files</code> to set defaults for different parts of the application. Razor looks for the closest view start file to the view that it being processed, which means that you can override the default setting by adding a view start file to the <code>Views/Home</code> or <code>Views/Shared</code> folders, for example.</p>
+<div class="admonition warning">
+<p class="admonition-title">Caution</p>
+<p>It is important to understand the difference between <code>omitting the Layout property</code> from the view file and <code>setting it to null</code>. If your view is self-contained and you do not want to use a layout, then set the Layout property to null. If you omit the Layout property, then MVC will assume that you do want a layout and that it should use the value it finds in the view start file.</p>
+</div>
+<h4 id="viewbag-property">ViewBag property<a class="headerlink" href="#viewbag-property" title="Permanent link">#</a></h4>
+<p>The <code>ViewBag</code> property returns a <code>dynamic object</code> that can be used to define arbitrary properties. Since the <code>ViewBag</code> is dynamic, we don’t have to declare the property names in advance, but it does mean that Visual Studio is unable to provide autocomplete suggestions for view bag properties.</p>
+<h4 id="attribute-values">Attribute values<a class="headerlink" href="#attribute-values" title="Permanent link">#</a></h4>
+<p>We can also use Razor expressions to set the value of <code>element attributes</code>, not only on the content.</p>
+<div class="code"><pre><span></span>&lt;div data-productid=&quot;@Model.ProductID&quot; data-stocklevel=&quot;@ViewBag.StockLevel&quot;&gt;
+    &lt;p&gt;Product Name: @Model.Name&lt;/p&gt;
+    &lt;p&gt;Product Price: @($&quot;{Model.Price:C2}&quot;)&lt;/p&gt;
+    &lt;p&gt;Stock Level: @ViewBag.StockLevel&lt;/p&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<h4 id="switch-statement">Switch statement<a class="headerlink" href="#switch-statement" title="Permanent link">#</a></h4>
+<p>We have to cast the dynamic ViewBag properties to the right type once, inside the condition:</p>
+<div class="code"><pre><span></span>@switch ((int)ViewBag.StockLevel) {...}
+</pre></div>
+
+
+<p>After that, inside the body, we dont need to do it any more:</p>
+<div class="code"><pre><span></span>default:
+    @: @ViewBag.StockLevel in Stock
+    break;
+</pre></div>
+
+
+<p>We do not have to put the elements or expressions in quotes or denote them in any special way—the Razor engine will interpret these as output to be processed. However, if we want to insert literal text into the view when it is not contained in an HTML element, then we need to give Razor a helping hand and prefix the line with an <code>@</code> character (see above).</p>
+<hr />
+<h3 id="visual-studio-tips-and-tricks">Visual Studio tips and tricks<a class="headerlink" href="#visual-studio-tips-and-tricks" title="Permanent link">#</a></h3>
+<h4 id="enable-developer-exception-page">Enable Developer Exception Page<a class="headerlink" href="#enable-developer-exception-page" title="Permanent link">#</a></h4>
+<p>In <code>Startup.cs</code> add this line to the <code>Configure</code> method:</p>
+<div class="code"><pre><span></span><span class="n">app</span><span class="p">.</span><span class="n">UseDeveloperExceptionPage</span><span class="p">();</span>
+</pre></div>
+
+
+<hr />
+<h3 id="browser-link-loader">Browser Link Loader<a class="headerlink" href="#browser-link-loader" title="Permanent link">#</a></h3>
+<p>Add</p>
+<div class="code"><pre><span></span><span class="s">&quot;Microsoft.VisualStudio.Web.BrowserLink.Loader&quot;</span><span class="p">:</span> <span class="s">&quot;14.0.0&quot;</span>
+</pre></div>
+
+
+<p>to <code>project.json</code> dependencies list. Also add</p>
+<div class="code"><pre><span></span><span class="n">app</span><span class="p">.</span><span class="n">UseBrowserLink</span><span class="p">();</span>
+</pre></div>
+
+
+<p>to the <code>Configure</code> method of <code>Startup.cs</code>.</p>
+<p>Run the project without debugging (Ctrl + F5) and you see this kind of code added to the HTML:</p>
+<div class="code"><pre><span></span><span class="c">&lt;!-- Visual Studio Browser Link --&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;application/json&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;__browserLink_initializationData&quot;</span><span class="p">&gt;</span>
+    <span class="p">{</span><span class="s2">&quot;requestId&quot;</span><span class="o">:</span><span class="s2">&quot;497a61f26544432a857e06ab5d501b7f&quot;</span><span class="p">,</span><span class="s2">&quot;requestMappingFromServer&quot;</span><span class="o">:</span><span class="kc">false</span><span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span>
+        <span class="na">src</span><span class="o">=</span><span class="s">&quot;http://localhost:2701/029471b4ee954e43adc0d452954d080f/browserLink&quot;</span>
+        <span class="na">async</span><span class="o">=</span><span class="s">&quot;async&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="c">&lt;!-- End Browser Link --&gt;</span>
+</pre></div>
+
+
+<div class="admonition warning">
+<p class="admonition-title">Alas</p>
+<p>I still see no added value to it. :( Unless it is just the synchronized browsing using multiple browsers. I also see this error in the browser console:</p>
+<p><code>[14:07:17 GMT+0200 (West-Europa (zomertijd))] Browser Link: Failed to invoke return value</code><br />
+<code>callback: TypeError: Cannot read property 'files' of null</code></p>
+</div>
+<hr />
+<h3 id="static-files">Static files<a class="headerlink" href="#static-files" title="Permanent link">#</a></h3>
+<p>ASP.NET Core includes support for delivering <code>static files</code> from the wwwroot folder to clients but it isn’t enabled by default when the Empty template is used to create the project. To enable static file support, add</p>
+<div class="code"><pre><span></span><span class="s">&quot;Microsoft.AspNetCore.StaticFiles&quot;</span><span class="p">:</span> <span class="s">&quot;1.0.0&quot;</span>
+</pre></div>
+
+
+<p>to <code>project.json</code> dependencies list. Also add</p>
+<div class="code"><pre><span></span><span class="n">app</span><span class="p">.</span><span class="n">UseStaticFiles</span><span class="p">();</span>
+</pre></div>
+
+
+<p>to the <code>Configure</code> method of <code>Startup.cs</code>.</p>
+<hr />
+<h3 id="bundling-and-minifying">Bundling and minifying<a class="headerlink" href="#bundling-and-minifying" title="Permanent link">#</a></h3>
+<p>Install <code>Bundler and Minifier</code> extension for the Visual Studio. After that it is possible to add <code>css</code> or <code>js</code> files to the bundle by selecting them one by one and choosing <code>Bundler &amp; Minifier | Bundle and Minify Files (Shift + Alt + F)</code> from the right mouse button menu.</p>
+<p>This will create a <code>bundle.css</code> or <code>bundle.js</code> file and also <code>bundleconfig.json</code> in the project root folder. Make sure the order of the files is what you need as <code>loading order</code>.</p>
+<hr />
+<h3 id="unit-testing-with-xunit-framework">Unit Testing with xUnit Framework<a class="headerlink" href="#unit-testing-with-xunit-framework" title="Permanent link">#</a></h3>
+<h4 id="preparation">Preparation<a class="headerlink" href="#preparation" title="Permanent link">#</a></h4>
+<ul>
+<li>create <code>test</code> folder inside the solution folder next to <code>src</code> folder</li>
+<li>add new <code>.NET Core | Class Library (.NET Core)</code> project inside the <code>test</code> folder</li>
+<li>add this code to its <code>project.json</code> file (check the latest versions):</li>
+</ul>
+<div class="code"><pre><span></span>  <span class="p">{</span>
+      <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0.0-*&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;testRunner&quot;</span><span class="p">:</span> <span class="s2">&quot;xunit&quot;</span><span class="p">,</span>
+
+      <span class="nt">&quot;dependencies&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;Microsoft.NETCore.App&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;platform&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0.1&quot;</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;xunit&quot;</span><span class="p">:</span> <span class="s2">&quot;2.1.0&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;dotnet-test-xunit&quot;</span><span class="p">:</span> <span class="s2">&quot;2.2.0-preview2-build1029&quot;</span>
+      <span class="p">},</span>
+
+      <span class="nt">&quot;frameworks&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;netcoreapp1.0&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;imports&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;dotnet5.6&quot;</span><span class="p">,</span> <span class="s2">&quot;portable-net45+win8&quot;</span><span class="p">]</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+</pre></div>
+
+
+<ul>
+<li>this configuration tells Visual Studio that three packages are required:<ul>
+<li>the <code>Microsoft.NETCore.App</code> package provides the <code>.NET Core API</code>.</li>
+<li>the <code>xunit</code> package provides the testing framework.</li>
+<li>the <code>dotnet-test-xunit</code> package provides the integration between <code>xUnit</code> and <code>Visual Studio</code>.</li>
+</ul>
+</li>
+<li>add the main project reference to the dependencies, e.g.</li>
+</ul>
+<div class="code"><pre><span></span>  <span class="p">{</span>
+      <span class="nt">&quot;dependencies&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="err">...</span>
+          <span class="nt">&quot;WorkingWithVisualStudio&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0.0&quot;</span>
+          <span class="err">...</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+</pre></div>
+
+
+<h4 id="fact-and-theory">Fact and Theory<a class="headerlink" href="#fact-and-theory" title="Permanent link">#</a></h4>
+<ul>
+<li>In the <code>xUnit</code> framework, a <code>Fact</code> is one single unit test. Example:</li>
+</ul>
+<div class="code"><pre><span></span><span class="na">  [Fact]</span>
+  <span class="k">public</span> <span class="k">void</span> <span class="nf">IndexActionModelIsComplete</span><span class="p">()</span> <span class="p">{</span>
+      <span class="c1">// Arrange</span>
+      <span class="kt">var</span> <span class="n">controller</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HomeController</span><span class="p">();</span>
+      <span class="n">controller</span><span class="p">.</span><span class="n">Repository</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ModelCompleteFakeRepository</span><span class="p">();</span>
+
+      <span class="c1">// Act</span>
+      <span class="kt">var</span> <span class="n">model</span> <span class="p">=</span> <span class="p">(</span><span class="n">controller</span><span class="p">.</span><span class="n">Index</span><span class="p">()</span> <span class="k">as</span> <span class="n">ViewResult</span><span class="p">)?.</span><span class="n">ViewData</span><span class="p">.</span><span class="n">Model</span>
+      <span class="k">as</span> <span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">Product</span><span class="p">&gt;;</span>
+
+      <span class="c1">// Assert</span>
+      <span class="n">Assert</span><span class="p">.</span><span class="n">Equal</span><span class="p">(</span><span class="n">controller</span><span class="p">.</span><span class="n">Repository</span><span class="p">.</span><span class="n">Products</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span>
+          <span class="n">Comparer</span><span class="p">.</span><span class="n">Get</span><span class="p">&lt;</span><span class="n">Product</span><span class="p">&gt;((</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">p1</span><span class="p">.</span><span class="n">Name</span> <span class="p">==</span> <span class="n">p2</span><span class="p">.</span><span class="n">Name</span>
+              <span class="p">&amp;&amp;</span> <span class="n">p1</span><span class="p">.</span><span class="n">Price</span> <span class="p">==</span> <span class="n">p2</span><span class="p">.</span><span class="n">Price</span><span class="p">));</span>
+  <span class="p">}</span>
+</pre></div>
+
+
+<ul>
+<li>A <code>Theory</code> is a way to parametrize the unit test in such a way that it becomes possible to run the same test multiple times, each time with a different set of parameter values. Example:</li>
+</ul>
+<div class="code"><pre><span></span><span class="na">  [Theory]</span>
+<span class="na">  [InlineData(275, 48.95, 19.50, 24.95)]</span>
+<span class="na">  [InlineData(5, 48.95, 19.50, 24.95)]</span>
+  <span class="k">public</span> <span class="k">void</span> <span class="nf">IndexActionModelIsComplete</span><span class="p">(</span><span class="kt">decimal</span> <span class="n">price1</span><span class="p">,</span> <span class="kt">decimal</span> <span class="n">price2</span><span class="p">,</span>
+  <span class="kt">decimal</span> <span class="n">price3</span><span class="p">,</span> <span class="kt">decimal</span> <span class="n">price4</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Arrange</span>
+      <span class="kt">var</span> <span class="n">controller</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HomeController</span><span class="p">();</span>
+      <span class="n">controller</span><span class="p">.</span><span class="n">Repository</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ModelCompleteFakeRepository</span> <span class="p">{</span>
+          <span class="n">Products</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Product</span><span class="p">[]</span> <span class="p">{</span>
+              <span class="k">new</span> <span class="n">Product</span> <span class="p">{</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;P1&quot;</span><span class="p">,</span> <span class="n">Price</span> <span class="p">=</span> <span class="n">price1</span> <span class="p">},</span>
+              <span class="k">new</span> <span class="n">Product</span> <span class="p">{</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;P2&quot;</span><span class="p">,</span> <span class="n">Price</span> <span class="p">=</span> <span class="n">price2</span> <span class="p">},</span>
+              <span class="k">new</span> <span class="n">Product</span> <span class="p">{</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;P3&quot;</span><span class="p">,</span> <span class="n">Price</span> <span class="p">=</span> <span class="n">price3</span> <span class="p">},</span>
+              <span class="k">new</span> <span class="n">Product</span> <span class="p">{</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;P4&quot;</span><span class="p">,</span> <span class="n">Price</span> <span class="p">=</span> <span class="n">price4</span> <span class="p">},</span>
+          <span class="p">}</span>
+      <span class="p">};</span>
+
+      <span class="c1">// Act</span>
+      <span class="kt">var</span> <span class="n">model</span> <span class="p">=</span> <span class="p">(</span><span class="n">controller</span><span class="p">.</span><span class="n">Index</span><span class="p">()</span> <span class="k">as</span> <span class="n">ViewResult</span><span class="p">)?.</span><span class="n">ViewData</span><span class="p">.</span><span class="n">Model</span>
+                      <span class="k">as</span> <span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">Product</span><span class="p">&gt;;</span>
+
+      <span class="c1">// Assert</span>
+      <span class="n">Assert</span><span class="p">.</span><span class="n">Equal</span><span class="p">(</span><span class="n">controller</span><span class="p">.</span><span class="n">Repository</span><span class="p">.</span><span class="n">Products</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span>
+          <span class="n">Comparer</span><span class="p">.</span><span class="n">Get</span><span class="p">&lt;</span><span class="n">Product</span><span class="p">&gt;((</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">p1</span><span class="p">.</span><span class="n">Name</span> <span class="p">==</span> <span class="n">p2</span><span class="p">.</span><span class="n">Name</span>
+              <span class="p">&amp;&amp;</span> <span class="n">p1</span><span class="p">.</span><span class="n">Price</span> <span class="p">==</span> <span class="n">p2</span><span class="p">.</span><span class="n">Price</span><span class="p">));</span>
+  <span class="p">}</span>
+</pre></div>
+
+
+<h4 id="getting-test-data-from-a-method-or-property">Getting Test Data from a Method or Property<a class="headerlink" href="#getting-test-data-from-a-method-or-property" title="Permanent link">#</a></h4>
+<p>We can create methods or properties giving us the enumerations for the test parameter values in a separate class, e.g. <code>ProductTestData.cs</code>. Then we can use <code>MemberData</code> attribute to specify it for the unit test to use. Example:</p>
+<div class="code"><pre><span></span><span class="na">[Theory]</span>
+<span class="na">[ClassData(typeof(ProductTestData))]</span>
+<span class="k">public</span> <span class="k">void</span> <span class="nf">IndexActionModelIsComplete</span><span class="p">(</span><span class="n">Product</span><span class="p">[]</span> <span class="n">products</span> <span class="p">)</span> <span class="p">{...}</span>
+</pre></div>
+
+
+<p>If we want to include the test data in the same class as the unit tests, then you can use the <code>MemberData</code> attribute instead of <code>ClassData</code>. The <code>MemberData</code> attribute is configured using a string that specifies the name of a static method that will provide an <code>IEnumerable&lt;object[]&gt;</code>, where each object array in the sequence is a set of arguments for the test method. Example:</p>
+<div class="code"><pre><span></span><span class="na">[Theory]</span>
+<span class="na">[MemberData(&quot;GetData&quot;)]</span>
+<span class="k">public</span> <span class="k">void</span> <span class="nf">IndexActionModelIsComplete</span><span class="p">(</span><span class="n">Product</span><span class="p">[]</span> <span class="n">products</span> <span class="p">)</span> <span class="p">{...}</span>
+</pre></div>
+
+
+<p>and the <code>GetData</code> should look something like this</p>
+<div class="code"><pre><span></span><span class="k">public</span> <span class="k">static</span> <span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">object</span><span class="p">[]&gt;</span> <span class="n">GetData</span>
+<span class="p">{</span>
+    <span class="k">get</span>
+    <span class="p">{</span>
+        <span class="c1">// ...</span>
+        <span class="k">yield</span> <span class="k">return</span> <span class="k">new</span> <span class="kt">object</span><span class="p">[]</span> <span class="p">{</span> <span class="m">8</span><span class="p">,</span> <span class="m">21</span> <span class="p">};</span>
+        <span class="k">yield</span> <span class="k">return</span> <span class="k">new</span> <span class="kt">object</span><span class="p">[]</span> <span class="p">{</span> <span class="m">16</span><span class="p">,</span> <span class="m">987</span> <span class="p">};</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Every <code>yield</code> statement should return an array of objects to substitute for the Product properties. And the method itself should be of type <code>IEnumerable&lt;object[]&gt;</code>.</p>
+<hr />
+<h3 id="mocking-with-moq">Mocking with MOQ<a class="headerlink" href="#mocking-with-moq" title="Permanent link">#</a></h3>
+<p><code>Microsoft</code> created a special fork of the <code>Moq</code> project and ported it to work with <code>.NET Core</code>.</p>
+<p>In order to be able to install the <code>Moq NuGet package</code>, we need first to configure the <code>NuGet Options</code>. Open <code>Tools | Options | NuGet Package Manager</code>, click on <code>Package Sources</code> and then on the green plus sign. Configure the new package source as follows:</p>
+<ul>
+<li><code>Name: ASP.NET Contrib</code></li>
+<li><code>Source: https://www.myget.org/F/aspnet-contrib/api/v3/index.json</code></li>
+</ul>
+<p>Add these two packages to the <code>package.json</code> in the test project:</p>
+<div class="code"><pre><span></span><span class="s2">&quot;moq.netcore&quot;</span><span class="err">:</span> <span class="s2">&quot;4.4.0-beta8&quot;</span>
+<span class="s2">&quot;System.Diagnostics.TraceSource&quot;</span><span class="err">:</span> <span class="s2">&quot;4.0.0&quot;</span>
+</pre></div>
+
+
+<p>Usage example:</p>
+<div class="code"><pre><span></span><span class="na">[Fact]</span>
+<span class="k">public</span> <span class="k">void</span> <span class="nf">RepositoryPropertyCalledOnce</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// Arrange</span>
+    <span class="kt">var</span> <span class="n">mock</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Mock</span><span class="p">&lt;</span><span class="n">IRepository</span><span class="p">&gt;();</span>
+    <span class="n">mock</span><span class="p">.</span><span class="n">SetupGet</span><span class="p">(</span><span class="n">m</span> <span class="p">=&gt;</span> <span class="n">m</span><span class="p">.</span><span class="n">Products</span><span class="p">)</span>
+        <span class="p">.</span><span class="n">Returns</span><span class="p">(</span><span class="k">new</span><span class="p">[]</span> <span class="p">{</span> <span class="k">new</span> <span class="n">Product</span> <span class="p">{</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;P1&quot;</span><span class="p">,</span> <span class="n">Price</span> <span class="p">=</span> <span class="m">100</span> <span class="p">}</span> <span class="p">});</span>
+    <span class="kt">var</span> <span class="n">controller</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HomeController</span> <span class="p">{</span> <span class="n">Repository</span> <span class="p">=</span> <span class="n">mock</span><span class="p">.</span><span class="n">Object</span> <span class="p">};</span>
+
+    <span class="c1">// Act</span>
+    <span class="kt">var</span> <span class="n">result</span> <span class="p">=</span> <span class="n">controller</span><span class="p">.</span><span class="n">Index</span><span class="p">();</span>
+
+    <span class="c1">// Assert</span>
+    <span class="n">mock</span><span class="p">.</span><span class="n">VerifyGet</span><span class="p">(</span><span class="n">m</span> <span class="p">=&gt;</span> <span class="n">m</span><span class="p">.</span><span class="n">Products</span><span class="p">,</span> <span class="n">Times</span><span class="p">.</span><span class="n">Once</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Explanation:</p>
+<ul>
+<li><code>var mock = new Mock&lt;IRepository&gt;();</code> - define the interface to be mocked</li>
+<li><code>SetupGet(m =&gt; m.Products)</code> - specify the property to be tested</li>
+<li><code>.Returns(...)</code> - specify the test value to be returned</li>
+<li><code>Repository = mock.Object</code> - <code>Object</code> is the special property that gives back the object we mock for this test</li>
+<li><code>mock.VerifyGet(m =&gt; m.Products, Times.Once);</code> - one of the verify methods to inspect the getter property</li>
+</ul>
+<hr />
+<h3 id="sportsstore">SportsStore<a class="headerlink" href="#sportsstore" title="Permanent link">#</a></h3>
+<ul>
+<li>Create a new empty <code>ASP.NET Core Web Application (.NET Core)</code> project/solution.</li>
+<li>Add these packages/tools to the <code>project.json</code> file:</li>
+</ul>
+<div class="code"><pre><span></span>  <span class="s2">&quot;dependencies&quot;</span><span class="err">:</span> <span class="p">{</span>
+      <span class="err">...</span>
+      <span class="nt">&quot;Microsoft.AspNetCore.Razor.Tools&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0.0-preview2-final&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;build&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;Microsoft.AspNetCore.StaticFiles&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Microsoft.AspNetCore.Mvc&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0.1&quot;</span>
+  <span class="p">}</span><span class="err">,</span>
+  <span class="s2">&quot;tools&quot;</span><span class="err">:</span> <span class="p">{</span>
+      <span class="nt">&quot;Microsoft.AspNetCore.Razor.Tools&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0.0-preview2-final&quot;</span><span class="p">,</span>
+      <span class="err">...</span>
+  <span class="p">}</span><span class="err">,</span>
+</pre></div>
+
+
+<ul>
+<li>In addition to the packages in the <code>dependencies</code> section, there is an addition to the <code>tools</code> section of the <code>project.json</code> file that configures the <code>Microsoft.AspNetCore.Razor.Tools</code> package for use in Visual Studio and enables IntelliSense for the built-in tag helpers, which are used to create HTML content that is tailored to the configuration of the MVC application.</li>
+<li>Here is the <code>Startup.cs</code>:</li>
+</ul>
+<div class="code"><pre><span></span>  <span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Builder</span><span class="p">;</span>
+  <span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Hosting</span><span class="p">;</span>
+  <span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Http</span><span class="p">;</span>
+  <span class="k">using</span> <span class="nn">Microsoft.Extensions.DependencyInjection</span><span class="p">;</span>
+  <span class="k">using</span> <span class="nn">Microsoft.Extensions.Logging</span><span class="p">;</span>
+
+  <span class="k">namespace</span> <span class="nn">SportsStore</span>
+  <span class="p">{</span>
+      <span class="k">public</span> <span class="k">class</span> <span class="nc">Startup</span>
+      <span class="p">{</span>
+          <span class="k">public</span> <span class="k">void</span> <span class="nf">ConfigureServices</span><span class="p">(</span><span class="n">IServiceCollection</span> <span class="n">services</span><span class="p">)</span>
+          <span class="p">{</span>
+              <span class="n">services</span><span class="p">.</span><span class="n">AddMvc</span><span class="p">();</span>
+          <span class="p">}</span>
+
+          <span class="k">public</span> <span class="k">void</span> <span class="nf">Configure</span><span class="p">(</span><span class="n">IApplicationBuilder</span> <span class="n">app</span><span class="p">,</span>
+          <span class="n">IHostingEnvironment</span> <span class="n">env</span><span class="p">,</span> <span class="n">ILoggerFactory</span> <span class="n">loggerFactory</span><span class="p">)</span>
+          <span class="p">{</span>
+              <span class="n">app</span><span class="p">.</span><span class="n">UseDeveloperExceptionPage</span><span class="p">();</span>
+              <span class="n">app</span><span class="p">.</span><span class="n">UseStatusCodePages</span><span class="p">();</span>
+              <span class="n">app</span><span class="p">.</span><span class="n">UseStaticFiles</span><span class="p">();</span>
+              <span class="n">app</span><span class="p">.</span><span class="n">UseMvcWithDefaultRoute</span><span class="p">();</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+</pre></div>
+
+
+<ul>
+<li>The <code>ConfigureServices</code> method is used to set up shared objects that can be used throughout the application through the <code>dependency injection</code> feature. The <code>AddMvc</code> method that is called in the <code>ConfigureServices</code> method is an extension method that sets up the shared objects used in MVC applications.</li>
+<li>The <code>Configure</code> method is used to set up the features that receive and process <code>HTTP requests</code>.</li>
+<li>add these folders: <code>Models</code>, <code>Controllers</code>, <code>Views</code></li>
+<li>in the <code>Views</code> folder add <code>_ViewImports.cshtml</code> file:</li>
+</ul>
+<div class="code"><pre><span></span>  <span class="n">@using</span> <span class="n">SportsStore</span><span class="p">.</span><span class="n">Models</span>
+  <span class="n">@addTagHelper</span> <span class="p">*,</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">AspNetCore</span><span class="p">.</span><span class="n">Mvc</span><span class="p">.</span><span class="n">TagHelpers</span>
+</pre></div>
+
+
+<ul>
+<li>create the unit test project <code>SportsStore.Tests</code> in the <code>test</code> folder.</li>
+<li>Configure its <code>project .json</code> as follows:</li>
+</ul>
+<div class="code"><pre><span></span>  <span class="p">{</span>
+      <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0.0-*&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;testRunner&quot;</span><span class="p">:</span> <span class="s2">&quot;xunit&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;dependencies&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;Microsoft.NETCore.App&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;platform&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0.1&quot;</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;xunit&quot;</span><span class="p">:</span> <span class="s2">&quot;2.1.0&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;dotnet-test-xunit&quot;</span><span class="p">:</span> <span class="s2">&quot;2.2.0-preview2-build1029&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;moq.netcore&quot;</span><span class="p">:</span> <span class="s2">&quot;4.4.0-beta8&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;System.Diagnostics.TraceSource&quot;</span><span class="p">:</span> <span class="s2">&quot;4.0.0&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;SportsStore&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0.0&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;frameworks&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;netcoreapp1.0&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;imports&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;dotnet5.6&quot;</span><span class="p">,</span> <span class="s2">&quot;portable-net45+win8&quot;</span> <span class="p">]</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+</pre></div>
+
+
+<ul>
+<li>Make sure that both <code>project.json</code> files refer to the same <code>ASP.NET Core MVC</code> version.</li>
+<li>Add your model class <code>Product.cs</code>, repository interface <code>IProductRepository</code> and a simple fake repository <code>FakeProductRepository</code></li>
+<li>Register the fake repository as a service in <code>Startup.cs</code>:</li>
+</ul>
+<div class="code"><pre><span></span>  <span class="k">public</span> <span class="k">void</span> <span class="nf">ConfigureServices</span><span class="p">(</span><span class="n">IServiceCollection</span> <span class="n">services</span><span class="p">)</span>
+  <span class="p">{</span>
+      <span class="n">services</span><span class="p">.</span><span class="n">AddTransient</span><span class="p">&lt;</span><span class="n">IProductRepository</span><span class="p">,</span> <span class="n">FakeProductRepository</span><span class="p">&gt;();</span>
+      <span class="p">...</span>
+  <span class="p">}</span>
+</pre></div>
+
+
+<ul>
+<li>Add the following standard views:</li>
+<li><code>Views/Shared/_Layout.cshtml</code></li>
+<li><code>Views/_ViewStart.cshtml</code> refering to <code>_Layout.cshtml</code> by default</li>
+<li>Example of setting up the default route in <code>Startup.cs</code>. Substitute</li>
+</ul>
+<div class="code"><pre><span></span>  <span class="n">app</span><span class="p">.</span><span class="n">UseMvcWithDefaultRoute</span><span class="p">();</span>
+</pre></div>
+
+
+<ul>
+<li>with</li>
+</ul>
+<div class="code"><pre><span></span>  <span class="n">app</span><span class="p">.</span><span class="n">UseMvc</span><span class="p">(</span><span class="n">routes</span> <span class="p">=&gt;</span>
+  <span class="p">{</span>
+      <span class="n">routes</span><span class="p">.</span><span class="n">MapRoute</span><span class="p">(</span>
+          <span class="n">name</span><span class="p">:</span> <span class="s">&quot;default&quot;</span><span class="p">,</span>
+          <span class="n">template</span><span class="p">:</span> <span class="s">&quot;{controller=Product}/{action=List}/{id?}&quot;</span><span class="p">);</span>
+  <span class="p">});</span>
+</pre></div>
+
+
+<hr />
+<h3 id="scaffolding">Scaffolding<a class="headerlink" href="#scaffolding" title="Permanent link">#</a></h3>
+<p>Some people prefer to have certain features automatically created when they create new controller or views. That is called <code>scaffolding</code>. If you want that, add the following packages to the <code>project.json</code> file:</p>
+<div class="code"><pre><span></span><span class="err">...</span>
+<span class="s2">&quot;dependencies&quot;</span><span class="err">:</span> <span class="p">{</span>
+    <span class="err">...</span>
+    <span class="nt">&quot;Microsoft.AspNetCore.StaticFiles&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Microsoft.AspNetCore.Mvc&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Microsoft.VisualStudio.Web.CodeGeneration.Tools&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0.0-preview2-final&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;build&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;Microsoft.VisualStudio.Web.CodeGenerators.Mvc&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0.0-preview2-final&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;build&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="err">...</span>
+<span class="s2">&quot;tools&quot;</span><span class="err">:</span> <span class="p">{</span>
+    <span class="err">...</span>
+    <span class="nt">&quot;Microsoft.VisualStudio.Web.CodeGeneration.Tools&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0.0-preview2-final&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;imports&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;portable-net45+win8+dnxcore50&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;portable-net45+win8&quot;</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="err">...</span>
+</pre></div>
+
+
+<hr />
+<h3 id="setup-the-database">Setup the database<a class="headerlink" href="#setup-the-database" title="Permanent link">#</a></h3>
+<ul>
+<li>add <code>EntityFramework</code> packages to <code>package.json</code>:</li>
+</ul>
+<div class="code"><pre><span></span>  <span class="s2">&quot;dependencies&quot;</span><span class="err">:</span> <span class="p">{</span>
+      <span class="err">...</span>
+      <span class="nt">&quot;Microsoft.EntityFrameworkCore.SqlServer&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0.1&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Microsoft.EntityFrameworkCore.Tools&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0.0-preview2-final&quot;</span>
+  <span class="p">}</span>
+</pre></div>
+
+
+<ul>
+<li>and the tools:</li>
+</ul>
+<div class="code"><pre><span></span>  <span class="s2">&quot;tools&quot;</span><span class="err">:</span> <span class="p">{</span>
+      <span class="err">...</span>
+      <span class="nt">&quot;Microsoft.EntityFrameworkCore.Tools&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0.0-preview2-final&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;imports&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;portable-net45+win8+dnxcore50&quot;</span><span class="p">,</span> <span class="s2">&quot;portable-net45+win8&quot;</span> <span class="p">]</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+</pre></div>
+
+
+<ul>
+<li>The <code>database context class</code> is the bridge between the <code>application</code> and the <code>EF Core</code> and provides access to the application’s data using model objects. To create the database context class for the <code>SportsStore</code> application, we add a class file called <code>ApplicationDbContext.cs</code> to the <code>Models</code> folder:</li>
+</ul>
+<div class="code"><pre><span></span>  <span class="k">using</span> <span class="nn">Microsoft.EntityFrameworkCore</span><span class="p">;</span>
+
+  <span class="k">namespace</span> <span class="nn">SportsStore.Models</span>
+  <span class="p">{</span>
+      <span class="k">public</span> <span class="k">class</span> <span class="nc">ApplicationDbContext</span> <span class="p">:</span> <span class="n">DbContext</span>
+      <span class="p">{</span>
+          <span class="k">public</span> <span class="nf">ApplicationDbContext</span><span class="p">(</span><span class="n">DbContextOptions</span><span class="p">&lt;</span><span class="n">ApplicationDbContext</span><span class="p">&gt;</span> <span class="n">options</span><span class="p">)</span>
+              <span class="p">:</span> <span class="k">base</span><span class="p">(</span><span class="n">options</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+          <span class="k">public</span> <span class="n">DbSet</span><span class="p">&lt;</span><span class="n">Product</span><span class="p">&gt;</span> <span class="n">Products</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+</pre></div>
+
+
+<ul>
+<li>To populate the database initially with some data, we use <code>SeedData.cs</code> class:</li>
+</ul>
+<div class="code"><pre><span></span>  <span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+  <span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Builder</span><span class="p">;</span>
+  <span class="k">using</span> <span class="nn">Microsoft.Extensions.DependencyInjection</span><span class="p">;</span>
+  <span class="k">namespace</span> <span class="nn">SportsStore.Models</span>
+  <span class="p">{</span>
+      <span class="k">public</span> <span class="k">static</span> <span class="k">class</span> <span class="nc">SeedData</span>
+      <span class="p">{</span>
+          <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">EnsurePopulated</span><span class="p">(</span><span class="n">IApplicationBuilder</span> <span class="n">app</span><span class="p">)</span>
+          <span class="p">{</span>
+              <span class="n">ApplicationDbContext</span> <span class="n">context</span> <span class="p">=</span>
+                  <span class="n">app</span><span class="p">.</span><span class="n">ApplicationServices</span><span class="p">.</span><span class="n">GetRequiredService</span><span class="p">&lt;</span><span class="n">ApplicationDbContext</span><span class="p">&gt;();</span>
+
+              <span class="k">if</span> <span class="p">(!</span><span class="n">context</span><span class="p">.</span><span class="n">Products</span><span class="p">.</span><span class="n">Any</span><span class="p">())</span>
+              <span class="p">{</span>
+                  <span class="n">context</span><span class="p">.</span><span class="n">Products</span><span class="p">.</span><span class="n">AddRange</span><span class="p">(</span>
+                  <span class="k">new</span> <span class="n">Product</span>
+                  <span class="p">{</span>
+                      <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Kayak&quot;</span><span class="p">,</span>
+                      <span class="n">Description</span> <span class="p">=</span> <span class="s">&quot;A boat for one person&quot;</span><span class="p">,</span>
+                      <span class="n">Category</span> <span class="p">=</span> <span class="s">&quot;Watersports&quot;</span><span class="p">,</span>
+                      <span class="n">Price</span> <span class="p">=</span> <span class="m">275</span>
+                  <span class="p">},</span>
+                  <span class="p">...</span>
+
+                  <span class="n">context</span><span class="p">.</span><span class="n">SaveChanges</span><span class="p">();</span>
+              <span class="p">}</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+</pre></div>
+
+
+<ul>
+<li>The static <code>EnsurePopulated</code> method receives an <code>IApplicationBuilder</code> argument, which is the class used in the <code>Configure</code> method of the <code>Startup</code> class to register middleware classes to handle HTTP requests, which is where we ensure that the database has content.</li>
+<li>The <code>EnsurePopulated</code> method obtains an <code>ApplicationDbContext</code> object through the <code>IApplicationBuilder</code> interface and uses it to check whether there are any <code>Product</code> objects in the database. If there are no objects, then the database is populated using a collection of <code>Product</code> objects using the <code>AddRange</code> method and then written to the database using the <code>SaveChanges</code> method.</li>
+<li>The next step is to create a class that implements the <code>IProductRepository</code> interface and gets its data using <code>Entity Framework Core</code> from the <code>ApplicationDbContext</code>.</li>
+</ul>
+<div class="code"><pre><span></span>  <span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+
+  <span class="k">namespace</span> <span class="nn">SportsStore.Models</span>
+  <span class="p">{</span>
+      <span class="k">public</span> <span class="k">class</span> <span class="nc">EFProductRepository</span> <span class="p">:</span> <span class="n">IProductRepository</span>
+      <span class="p">{</span>
+          <span class="k">private</span> <span class="n">ApplicationDbContext</span> <span class="n">context</span><span class="p">;</span>
+          <span class="k">public</span> <span class="nf">EFProductRepository</span><span class="p">(</span><span class="n">ApplicationDbContext</span> <span class="n">ctx</span><span class="p">)</span>
+          <span class="p">{</span>
+              <span class="n">context</span> <span class="p">=</span> <span class="n">ctx</span><span class="p">;</span>
+          <span class="p">}</span>
+          <span class="k">public</span> <span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">Product</span><span class="p">&gt;</span> <span class="n">Products</span> <span class="p">=&gt;</span> <span class="n">context</span><span class="p">.</span><span class="n">Products</span><span class="p">;</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+</pre></div>
+
+
+<ul>
+<li>create <code>appsettings.json</code> file in the project root folder based on the <code>ASP.NET Configuration File</code> template and configure the connection string:</li>
+</ul>
+<div class="code"><pre><span></span>  <span class="p">{</span>
+      <span class="nt">&quot;Data&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;SportStoreProducts&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;ConnectionString&quot;</span><span class="p">:</span> <span class="s2">&quot;Server=(localdb)\\MSSQLLocalDB;Database=SportsStore;Trusted_Connection=True;MultipleActiveResultSets=true&quot;</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+</pre></div>
+
+
+<ul>
+<li>add a new dependency to read the <code>json</code> configuration file:</li>
+</ul>
+<div class="code"><pre><span></span>  <span class="s2">&quot;dependencies&quot;</span><span class="err">:</span> <span class="p">{</span>
+      <span class="err">...</span>
+      <span class="nt">&quot;Microsoft.Extensions.Configuration.Json&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0.0&quot;</span>
+  <span class="p">}</span><span class="err">,</span>
+</pre></div>
+
+
+<ul>
+<li>configure the <code>Startup.cs</code>:</li>
+</ul>
+<div class="code"><pre><span></span>  <span class="p">...</span>
+  <span class="k">using</span> <span class="nn">Microsoft.EntityFrameworkCore</span><span class="p">;</span>
+  <span class="k">using</span> <span class="nn">Microsoft.Extensions.Configuration</span><span class="p">;</span>
+
+  <span class="k">namespace</span> <span class="nn">SportsStore</span>
+  <span class="p">{</span>
+      <span class="k">public</span> <span class="k">class</span> <span class="nc">Startup</span>
+      <span class="p">{</span>
+          <span class="n">IConfigurationRoot</span> <span class="n">Configuration</span><span class="p">;</span>
+
+          <span class="k">public</span> <span class="nf">Startup</span><span class="p">(</span><span class="n">IHostingEnvironment</span> <span class="n">env</span><span class="p">)</span>
+          <span class="p">{</span>
+              <span class="n">Configuration</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ConfigurationBuilder</span><span class="p">()</span>
+                  <span class="p">.</span><span class="n">SetBasePath</span><span class="p">(</span><span class="n">env</span><span class="p">.</span><span class="n">ContentRootPath</span><span class="p">)</span>
+                  <span class="p">.</span><span class="n">AddJsonFile</span><span class="p">(</span><span class="s">&quot;appsettings.json&quot;</span><span class="p">).</span><span class="n">Build</span><span class="p">();</span>
+          <span class="p">}</span>
+
+          <span class="k">public</span> <span class="k">void</span> <span class="nf">ConfigureServices</span><span class="p">(</span><span class="n">IServiceCollection</span> <span class="n">services</span><span class="p">)</span>
+          <span class="p">{</span>
+              <span class="n">services</span><span class="p">.</span><span class="n">AddDbContext</span><span class="p">&lt;</span><span class="n">ApplicationDbContext</span><span class="p">&gt;(</span><span class="n">options</span> <span class="p">=&gt;</span>
+                  <span class="n">options</span><span class="p">.</span><span class="n">UseSqlServer</span><span class="p">(</span><span class="n">Configuration</span><span class="p">[</span><span class="s">&quot;Data:SportStoreProducts:ConnectionString&quot;</span><span class="p">]));</span>
+              <span class="n">services</span><span class="p">.</span><span class="n">AddTransient</span><span class="p">&lt;</span><span class="n">IProductRepository</span><span class="p">,</span> <span class="n">EFProductRepository</span><span class="p">&gt;();</span>
+              <span class="p">...</span>
+          <span class="p">}</span>
+
+          <span class="k">public</span> <span class="k">void</span> <span class="nf">Configure</span><span class="p">(</span>
+              <span class="n">IApplicationBuilder</span> <span class="n">app</span><span class="p">,</span>
+              <span class="n">IHostingEnvironment</span> <span class="n">env</span><span class="p">,</span>
+              <span class="n">ILoggerFactory</span> <span class="n">loggerFactory</span><span class="p">)</span>
+          <span class="p">{</span>
+              <span class="p">...</span>
+              <span class="n">SeedData</span><span class="p">.</span><span class="n">EnsurePopulated</span><span class="p">(</span><span class="n">app</span><span class="p">);</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+</pre></div>
+
+
+<ul>
+<li>open <code>Tools | Nuget Package Manager | Package Manager Console</code> to create and apply database migrations:</li>
+</ul>
+<div class="code"><pre><span></span>  Add-Migration Initial
+  Update-Database
+</pre></div>
+
+
+<ul>
+<li>rebuild the solution and run - we will see the list of products loaded from the database.</li>
+</ul>
+<hr />
+<h3 id="viewmodels-and-taghelpers">ViewModels and TagHelpers<a class="headerlink" href="#viewmodels-and-taghelpers" title="Permanent link">#</a></h3>
+<ul>
+<li>If we want to customize the information to be used in the view, we can do that with <code>ViewModels</code>. For that we create a <code>ViewModels</code> subfolder inside the <code>Models</code> folder. They can <code>be registered</code> in <code>_ViewImports.cshtml</code>.</li>
+<li><code>TagHelpers</code> are one of the most useful ways that you can introduce C# logic into your views. The code for a tag helper can look tortured because C# and HTML don’t mix easily. But using tag helpers is preferable to including blocks of C# code in a view because a tag helper can be easily <code>unit tested</code>. Most MVC components, such as controllers and views, are discovered automatically, but tag helpers <code>have to be registered</code> in <code>_ViewImports.cshtml</code>.</li>
+<li>To test the <code>tag helper</code> class, I call the <code>Process</code> method with test data and provide a <code>TagHelperOutput</code> object that is inspected to see the HTML that was generated.</li>
+<li>When we pass the data to the view via a view model, we need to replace the type. E.g. it can become <code>@model ProductsListViewModel</code> and <code>Model.Products</code> instead of <code>@model IEnumerable&lt;Product&gt;</code> and <code>Model</code>.</li>
+</ul>
+<hr />
+<h3 id="installing-bootstrap-package">Installing Bootstrap package<a class="headerlink" href="#installing-bootstrap-package" title="Permanent link">#</a></h3>
+<p>Add <code>bower.json</code> file to the project root:</p>
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;asp.net&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;private&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;dependencies&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;bootstrap&quot;</span><span class="p">:</span> <span class="s2">&quot;3.3.7&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>This will add <code>wwwroot/lib</code> folder and inside it <code>bootstrap</code> and <code>jquery</code> sources.</p>
+<hr />
+<h3 id="improving-the-urls">Improving the URLs<a class="headerlink" href="#improving-the-urls" title="Permanent link">#</a></h3>
+<p>Normally, the page links look like this:</p>
+<p><code>http://localhost/?page=2</code></p>
+<p>But we can make them more user friendly by creating a scheme that follows the pattern of <code>composable URLs</code>, which look like this:</p>
+<p><code>http://localhost/Page2</code></p>
+<p>To do that we register a new route in our MVC middleware (<code>Configure</code> method in <code>Startup.cs</code>):</p>
+<div class="code"><pre><span></span><span class="n">routes</span><span class="p">.</span><span class="n">MapRoute</span><span class="p">(</span>
+    <span class="n">name</span><span class="p">:</span> <span class="s">&quot;pagination&quot;</span><span class="p">,</span>
+    <span class="n">template</span><span class="p">:</span> <span class="s">&quot;Products/Page{page}&quot;</span><span class="p">,</span>
+    <span class="n">defaults</span><span class="p">:</span> <span class="k">new</span> <span class="p">{</span> <span class="n">Controller</span> <span class="p">=</span> <span class="s">&quot;Product&quot;</span><span class="p">,</span> <span class="n">action</span> <span class="p">=</span> <span class="s">&quot;List&quot;</span> <span class="p">});</span>
+</pre></div>
+
+
+<p>It is important that this route is added <code>before</code> the default route.</p>
+<hr />
+<h3 id="enabling-sessions">Enabling Sessions<a class="headerlink" href="#enabling-sessions" title="Permanent link">#</a></h3>
+<p>Add these new packages to the <code>package.json</code>:</p>
+<div class="code"><pre><span></span><span class="s2">&quot;Microsoft.AspNetCore.Session&quot;</span><span class="err">:</span> <span class="s2">&quot;1.0.0&quot;</span><span class="err">,</span>
+<span class="s2">&quot;Microsoft.Extensions.Caching.Memory&quot;</span><span class="err">:</span> <span class="s2">&quot;1.0.0&quot;</span><span class="err">,</span>
+<span class="s2">&quot;Microsoft.AspNetCore.Http.Extensions&quot;</span><span class="err">:</span> <span class="s2">&quot;1.0.0&quot;</span>
+</pre></div>
+
+
+<p>Register new services and middleware to the <code>Startup.cs</code>:</p>
+<div class="code"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">ConfigureServices</span><span class="p">(</span><span class="n">IServiceCollection</span> <span class="n">services</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">...</span>
+    <span class="n">services</span><span class="p">.</span><span class="n">AddMemoryCache</span><span class="p">();</span>
+    <span class="n">services</span><span class="p">.</span><span class="n">AddSession</span><span class="p">();</span>
+    <span class="n">services</span><span class="p">.</span><span class="n">AddMvc</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">void</span> <span class="nf">Configure</span><span class="p">(</span><span class="n">IApplicationBuilder</span> <span class="n">app</span><span class="p">,</span>
+    <span class="p">...</span>
+    <span class="n">app</span><span class="p">.</span><span class="n">UseSession</span><span class="p">();</span>
+    <span class="n">app</span><span class="p">.</span><span class="n">UseMvc</span><span class="p">(...);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<div class="admonition important">
+<p class="admonition-title">AddMemoryCache</p>
+<p>The <code>AddMemoryCache</code> method call sets up the in-memory data store. The <code>AddSession</code> method registers the services used to access session data, and the <code>UseSession</code> method allows the session system to automatically associate requests with sessions when they arrive from the client.</p>
+</div>
+<hr />
+<h3 id="annotations">Annotations<a class="headerlink" href="#annotations" title="Permanent link">#</a></h3>
+<ul>
+<li><code>BindNever</code> attribute prevents the user supplying values for these properties in an HTTP request.</li>
+</ul>
+<h4 id="adding-migrations">Adding migrations<a class="headerlink" href="#adding-migrations" title="Permanent link">#</a></h4>
+<p>Suppose we add a new <code>DbSet</code> to our <code>ApplicationDbContext.cs</code>:</p>
+<div class="code"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">ApplicationDbContext</span> <span class="p">:</span> <span class="n">DbContext</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="nf">ApplicationDbContext</span><span class="p">(</span><span class="n">DbContextOptions</span><span class="p">&lt;</span><span class="n">ApplicationDbContext</span><span class="p">&gt;</span> <span class="n">options</span><span class="p">)</span>
+        <span class="p">:</span> <span class="k">base</span><span class="p">(</span><span class="n">options</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+    <span class="p">...</span>
+    <span class="k">public</span> <span class="n">DbSet</span><span class="p">&lt;</span><span class="n">Order</span><span class="p">&gt;</span> <span class="n">Orders</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>To create the <code>migration</code>, open the NuGet <code>Package Manger Console</code> from the <code>Tools ➤ NuGet Package Manage</code> menu and run the following command :</p>
+<p><code>Add-Migration Orders</code></p>
+<p>This command tells EF Core to take a new snapshot of the application, work out how it differs from the previous database version, and generate a new migration called <code>Orders</code>. The name <code>Orders</code> here is arbitrary but it is handy to let it reflect the change.</p>
+<p>To update the database schema, run the following command:</p>
+<p><code>Update-Database</code></p>
+<hr />
+<h3 id="resetting-the-database">Resetting the Database<a class="headerlink" href="#resetting-the-database" title="Permanent link">#</a></h3>
+<p>When you are making frequent changes to the model, there will come a point when your migrations and your database schema get out of sync. The easiest thing to do is delete the database and start over. However, this applies <strong>only during development</strong>, of course, because you will lose any data you have stored.</p>
+<ul>
+<li>Select the <code>SQL Server Object Explorer</code> item from the Visual Studio <code>View</code> menu and click the <code>Add Sql Server</code> button.</li>
+<li>Enter <code>(localdb)\mssqllocaldb</code> into the <code>Server Name</code> field and click the <code>Connect</code> button. A new item will appear in the <code>SQL Server Object Explorer</code> window, which you can expand to see the <code>LocalDB</code> databases that have been created.</li>
+<li>Right-click the database you want to remove and select <code>Delete</code> from the pop-up menu. <code>Check the option to close the existing connections</code> and then click the <code>OK</code> button to delete the database.</li>
+<li>Once the database has been removed, run the following command from the <code>Package Manager Console</code> to create the database and apply the migrations you have created by running the following command:</li>
+</ul>
+<p><code>Update-Database</code></p>
+<ul>
+<li>This will reset the database so that it accurately reflects your model and allow you to return to developing your application.</li>
+</ul>
+<hr />
+<h3 id="using-tempdata">Using TempData<a class="headerlink" href="#using-tempdata" title="Permanent link">#</a></h3>
+<p>We are using TempData in the POST method in a controller:</p>
+<div class="code"><pre><span></span><span class="na">[HttpPost]</span>
+<span class="k">public</span> <span class="n">IActionResult</span> <span class="nf">Edit</span><span class="p">(</span><span class="n">Product</span> <span class="n">product</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">ModelState</span><span class="p">.</span><span class="n">IsValid</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">_repository</span><span class="p">.</span><span class="n">SaveProduct</span><span class="p">(</span><span class="n">product</span><span class="p">);</span>
+        <span class="n">TempData</span><span class="p">[</span><span class="s">&quot;message&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="err">$</span><span class="s">&quot;{product.Name} has been saved&quot;</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nf">RedirectToAction</span><span class="p">(</span><span class="s">&quot;Index&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="c1">// there is something wrong with the data values</span>
+        <span class="k">return</span> <span class="nf">View</span><span class="p">(</span><span class="n">product</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>We check that the model binding process has been able to validate the data submitted to the user by reading the value of the <code>ModelState.IsValid</code> property. If everything is OK, we save the changes to the repository and redirect the user to the <code>Index</code> action so they see the modified list of products. If there is a problem with the data, we render the default view again so that the user can make corrections.</p>
+<p>After we have saved the changes in the repository, we store a message using the <code>TempData</code> feature, which is part of the <code>ASP.NET Core session state</code> feature. This is a <code>key/value</code> dictionary similar to the <code>session data</code> and <code>view bag</code> features we used previously.</p>
+<p>The key difference from <code>session data</code> is that <code>temp data</code> persists until it is read. We cannot use <code>ViewBag</code> in this situation because <code>ViewBag</code> passes data between the <code>controller</code> and <code>view</code>, and it cannot hold data for longer than <code>the current HTTP request</code>. When an edit succeeds, the browser is redirected to a new URL, so the <code>ViewBag</code> data is lost.</p>
+<p>We could use the <code>session data</code> feature, but then the message would be persistent until we explicitly removed it, which we would rather not have to do.</p>
+<p>So, the <code>temp data</code> feature is the perfect fit. The data is restricted to a <code>single user’s session</code> (so that users do not see each other’s <code>TempData</code>) and will persist long enough for us to read it. We will read the data in the <code>view</code> rendered by the <code>action method</code> to which we redirect the user</p>
+<p>The message will be displayed once and disappear if you reload the screen with the template using this <code>temp data</code>, because <code>TempData</code> is deleted when it is read. That is convenient since we do not want old messages hanging around.</p>
+<hr />
+<h3 id="localization-hell">Localization hell<a class="headerlink" href="#localization-hell" title="Permanent link">#</a></h3>
+<p>By the time we get to editing with validation, something bad happens. It looks that by default the <code>jQuery-validation</code> (client side validation) expects <code>"en-US"</code> as its culture and the server side validation expects <code>"nl-NL"</code>. Therefore, when I see <code>€</code> as currency and <code>","</code> as decimal separator, I cannot change the price. Neither <code>","</code> nor <code>"."</code> are accepted. One is rejected by the client side and the other by the server side validation.</p>
+<p>Temporary workaround was to configure <code>"en-US"</code> as the default culture, so that <code>"$"</code> and <code>"."</code> are displayed on the screen. Then the validation works.</p>
+<hr />
+<h3 id="adding-identity">Adding Identity<a class="headerlink" href="#adding-identity" title="Permanent link">#</a></h3>
+<p>Add a new dependency to <code>project.json</code>:</p>
+<div class="code"><pre><span></span><span class="s2">&quot;dependencies&quot;</span><span class="err">:</span> <span class="p">{</span>
+    <span class="err">...</span>
+    <span class="nt">&quot;Microsoft.AspNetCore.Identity.EntityFrameworkCore&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0.0&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Add a new <code>AppIdentityDbContext</code> class to <code>Models</code> folder:</p>
+<div class="code"><pre><span></span><span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Identity.EntityFrameworkCore</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.EntityFrameworkCore</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">SportsStore.Models</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">AppIdentityDbContext</span> <span class="p">:</span> <span class="n">IdentityDbContext</span><span class="p">&lt;</span><span class="n">IdentityUser</span><span class="p">&gt;</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="nf">AppIdentityDbContext</span><span class="p">(</span><span class="n">DbContextOptions</span><span class="p">&lt;</span><span class="n">AppIdentityDbContext</span><span class="p">&gt;</span> <span class="n">options</span><span class="p">)</span>
+            <span class="p">:</span> <span class="k">base</span><span class="p">(</span><span class="n">options</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>and a new connection string in <code>appsettings.json</code> file:</p>
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;Data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="err">...</span>
+        <span class="nt">&quot;SportStoreIdentity&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;ConnectionString&quot;</span><span class="p">:</span> <span class="s2">&quot;Server=(localdb)\\MSSQLLocalDB;Database=Identity;Trusted_Connection=True;MultipleActiveResultSets=true&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Add new services to <code>ConfigureServices</code> in <code>Startup.cs</code>:</p>
+<div class="code"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">ConfigureServices</span><span class="p">(</span><span class="n">IServiceCollection</span> <span class="n">services</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="p">...</span>
+    <span class="n">services</span><span class="p">.</span><span class="n">AddDbContext</span><span class="p">&lt;</span><span class="n">AppIdentityDbContext</span><span class="p">&gt;(</span><span class="n">options</span> <span class="p">=&gt;</span>
+        <span class="n">options</span><span class="p">.</span><span class="n">UseSqlServer</span><span class="p">(</span><span class="n">Configuration</span><span class="p">[</span><span class="s">&quot;Data:SportStoreIdentity:ConnectionString&quot;</span><span class="p">]));</span>
+
+    <span class="n">services</span><span class="p">.</span><span class="n">AddIdentity</span><span class="p">&lt;</span><span class="n">IdentityUser</span><span class="p">,</span> <span class="n">IdentityRole</span><span class="p">&gt;()</span>
+        <span class="p">.</span><span class="n">AddEntityFrameworkStores</span><span class="p">&lt;</span><span class="n">AppIdentityDbContext</span><span class="p">&gt;();</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>and new entries in <code>Configure</code>:</p>
+<div class="code"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">Configure</span><span class="p">()</span>
+    <span class="n">app</span><span class="p">.</span><span class="n">UseIdentity</span><span class="p">();</span>
+    <span class="n">app</span><span class="p">.</span><span class="n">UseMvc</span><span class="p">();</span>
+    <span class="n">SeedData</span><span class="p">.</span><span class="n">EnsurePopulated</span><span class="p">(</span><span class="n">app</span><span class="p">);</span>
+    <span class="n">IdentitySeedData</span><span class="p">.</span><span class="n">EnsurePopulated</span><span class="p">(</span><span class="n">app</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p><code>IdentitySeedData</code> should be created in the <code>Models</code> folder to create an administrative account.</p>
+<div class="code"><pre><span></span><span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Builder</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Identity</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Identity.EntityFrameworkCore</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.Extensions.DependencyInjection</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">SportsStore.Models</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">class</span> <span class="nc">IdentitySeedData</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="k">const</span> <span class="kt">string</span> <span class="n">adminUser</span> <span class="p">=</span> <span class="s">&quot;Admin&quot;</span><span class="p">;</span>
+        <span class="k">private</span> <span class="k">const</span> <span class="kt">string</span> <span class="n">adminPassword</span> <span class="p">=</span> <span class="s">&quot;Secret123$&quot;</span><span class="p">;</span>
+
+        <span class="k">public</span> <span class="k">static</span> <span class="k">async</span> <span class="k">void</span> <span class="nf">EnsurePopulated</span><span class="p">(</span><span class="n">IApplicationBuilder</span> <span class="n">app</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">UserManager</span><span class="p">&lt;</span><span class="n">IdentityUser</span><span class="p">&gt;</span> <span class="n">userManager</span> <span class="p">=</span> <span class="n">app</span><span class="p">.</span><span class="n">ApplicationServices</span>
+                <span class="p">.</span><span class="n">GetRequiredService</span><span class="p">&lt;</span><span class="n">UserManager</span><span class="p">&lt;</span><span class="n">IdentityUser</span><span class="p">&gt;&gt;();</span>
+
+            <span class="n">IdentityUser</span> <span class="n">user</span> <span class="p">=</span> <span class="k">await</span> <span class="n">userManager</span><span class="p">.</span><span class="n">FindByIdAsync</span><span class="p">(</span><span class="n">adminUser</span><span class="p">);</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">user</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">user</span> <span class="p">=</span> <span class="k">new</span> <span class="n">IdentityUser</span><span class="p">(</span><span class="s">&quot;Admin&quot;</span><span class="p">);</span>
+                <span class="k">await</span> <span class="n">userManager</span><span class="p">.</span><span class="n">CreateAsync</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">adminPassword</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<hr />
+<h3 id="adding-identity-migrations">Adding Identity migrations<a class="headerlink" href="#adding-identity-migrations" title="Permanent link">#</a></h3>
+<ul>
+<li><code>Add-Migration Initial -Context AppIdentityDbContext</code></li>
+<li><code>Update-Database -Context AppIdentityDbContext</code></li>
+</ul>
+<p>This will create the new database and add the <code>AspNetUsers</code> and <code>AspNetRoles</code> in it.</p>
+<hr />
+<h3 id="adding-authorization">Adding Authorization<a class="headerlink" href="#adding-authorization" title="Permanent link">#</a></h3>
+<p>When <code>ASP.NET Core Identity</code> is in place, we can apply <code>Authorization</code>. We don’t want to stop unauthenticated users from accessing the other action methods in the <code>Order</code> controller, so we have applied the <code>Authorize</code> attribute only to the <code>List</code> and <code>MarkShipped</code> methods.</p>
+<div class="code"><pre><span></span><span class="na">[Authorize]</span>
+<span class="k">public</span> <span class="n">ViewResult</span> <span class="nf">List</span><span class="p">()</span> <span class="p">=&gt;</span>
+    <span class="n">View</span><span class="p">(</span><span class="n">_repository</span><span class="p">.</span><span class="n">Orders</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">o</span> <span class="p">=&gt;</span> <span class="p">!</span><span class="n">o</span><span class="p">.</span><span class="n">Shipped</span><span class="p">));</span>
+
+<span class="na">[HttpPost]</span>
+<span class="na">[Authorize]</span>
+<span class="k">public</span> <span class="n">IActionResult</span> <span class="nf">MarkShipped</span><span class="p">(</span><span class="kt">int</span> <span class="n">orderID</span><span class="p">)</span> <span class="p">{...}</span>
+</pre></div>
+
+
+<p>We want to protect <strong>all of the action methods</strong> defined by the <code>Admin</code> controller, and we can do this by applying the <code>Authorize</code>attribute to the controller class, which then applies the authorization policy to all the action methods it contains.</p>
+<div class="code"><pre><span></span><span class="na">[Authorize]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">AdminController</span> <span class="p">:</span> <span class="n">Controller</span>
+<span class="p">{...}</span>
+</pre></div>
+
+
+<div class="admonition warning">
+<p class="admonition-title">Caution</p>
+<p>In general, using client-side data validation is a good idea. It offloads some of the work from your server and gives users immediate feedback about the data they are providing. However, you should not be tempted to perform authentication at the client, as this would typically involve sending valid credentials to the client so they can be used to check the username and password that the user has entered, or at least trusting the client’s report of whether they have successfully authenticated. Authentication should always be done at the server.</p>
+</div>
+<hr />
+<h3 id="sources-used">Sources used<a class="headerlink" href="#sources-used" title="Permanent link">#</a></h3>
+<ol>
+<li><a href="http://www.apress.com/9781484203989?gtmf=s">Adam Freeman - Pro ASP.NET Core MVC (2016)</a></li>
+<li><a href="http://www.wrox.com/WileyCDA/WroxTitle/Professional-C-6-and-NET-Core-1-0.productCd-111909660X.html">Christian Nagel - Professional C# 6 and .NET Core 1.0 (2016)</a></li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tips/" class="btn btn-neutral float-right" title="Tips">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../new_project/" class="btn btn-neutral" title="New Project"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2017 <a href="https://madrus4u.com">Balans4U</a></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/madrus/kdocs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../new_project/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../tips/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script>
+
+</body>
+</html>
