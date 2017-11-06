@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/madrus/kdocs.svg?branch=gh-pages)](https://travis-ci.org/madrus/kdocs)
+[![Build Status](https://travis-ci.org/madrus/kdocs.svg?branch=master)](https://travis-ci.org/madrus/kdocs)
 
 # Notes on Madrus's Docs
 
